@@ -1,11 +1,11 @@
 Package: hamonikr-themes
-Version: 0.0.5-1
+Version: 0.0.9-1
 Architecture: all
 Maintainer: HamoniKR <pkg@hamonikr.org>
-Installed-Size: 4680
+Installed-Size: 4703
 Depends: mint-backgrounds-tara, mint-themes, mint-x-icons, mint-y-icons
 Conflicts: cinnamon-themes, mint-clearloox-theme, mint-themes-gtk3, mint-x-theme, mint-y-theme, mint-z-theme
-Replaces: cinnamon-themes, mint-clearloox-theme, mint-themes, mint-themes-gtk3, mint-x-theme, mint-y-theme, mint-z-theme
+Replaces: cinnamon-themes, gnome-icon-theme, mint-clearloox-theme, mint-themes, mint-themes-gtk3, mint-x-theme, mint-y-theme, mint-z-theme
 Provides: mint-mate-default-settings
 Section: gnome
 Priority: optional

@@ -1,5 +1,5 @@
 ca8366603fa22005f55c32b4926dd4c6  usr/bin/hamonikr-themes
-312d9ccc279eddf18c6314f48d934b3a  usr/share/doc/hamonikr-themes/changelog.Debian.gz
+ad1c4cc0f9c10c229ddc9c2d883f3cc2  usr/share/doc/hamonikr-themes/changelog.Debian.gz
 6ed8a389e91e419570b0ffe298163711  usr/share/icons/HamoniKR/icon-theme.cache
 b00669503e8d0b85a3b74eca8497d9ac  usr/share/icons/HamoniKR/index.theme
 51b07cb057ef4130f723a72d40d2bc9d  usr/share/icons/HamoniKR/places/128/folder-documents.svg
@@ -93,6 +93,12 @@ f8957d14b7c1e08d54c91a27b38e6716  usr/share/icons/HamoniKR/places/48/folder-vide
 42552918960ebf952adfc1028d93cde6  usr/share/icons/HamoniKR/places/48/folder.svg
 89ce4a91d21ce936b054360b8869c546  usr/share/icons/HamoniKR/places/48/user-desktop.svg
 c1b8dd3db04fd2f1665758548a6a8faf  usr/share/icons/HamoniKR/places/48/user-trash-full.svg
+aa6d362d5b281d3b63050ce457c3fd8d  usr/share/icons/gnome/16x16/places/debian-swirl.png
+99e84efc8acd4eaec5c5113be40ba0f7  usr/share/icons/gnome/22x22/places/debian-swirl.png
+50f938e7ece6081f1ada845fd76e576f  usr/share/icons/gnome/24x24/places/debian-swirl.png
+cf25624eeea734b7001ffdeada3f1e0e  usr/share/icons/gnome/32x32/places/debian-swirl.png
+fbe42f2d88ae05b53ef7256a36fc1ec2  usr/share/icons/gnome/48x48/places/debian-swirl.png
+5a88bc2bb61cf0bdf9ff4407a6ac7848  usr/share/icons/gnome/scalable/places/debian-swirl.svg
 f9df38a7e71851cc3d331556b52e8440  usr/share/themes/HamoniKR/cinnamon/add-workspace-hover.png
 d906ae96784f0a3b04800038d173d5e4  usr/share/themes/HamoniKR/cinnamon/add-workspace.png
 d028653902c41d75afc045fac708dc10  usr/share/themes/HamoniKR/cinnamon/calendar-arrow-left.svg
