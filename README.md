@@ -18,4 +18,4 @@ sudo dpkg -i ../hamonikr-themes_*_amd64.deb
 ```
 
 # License
-[LICENSE](GPL-3+)
+[GPL-3+](LICENSE)
