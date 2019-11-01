@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ $1 = "hamonikr" ] || [ $1 = "default" ] || [ $1 = "install" ]
+then
+	gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
+	gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR'
+	gsettings set org.cinnamon.theme name 'HamoniKR'
+elif [ $1 = "uninstall" ]
+then
+	gsettings set org.cinnamon.desktop.interface icon-theme 'Mint-Y-Dark'
+	gsettings set org.cinnamon.desktop.interface gtk-theme 'Mint-Y'
+	gsettings set org.cinnamon.theme name 'Mint-Y-Dark'
+else
+	echo " hamonikr | default | install | uninstall"
+fi

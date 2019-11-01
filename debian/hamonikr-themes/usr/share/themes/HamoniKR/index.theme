@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=HamoniKR
+Comment=HamoniKR theme.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=HamoniKR
+MetacityTheme=Mint-X
+IconTheme=HamoniKR
+CursorTheme=default
