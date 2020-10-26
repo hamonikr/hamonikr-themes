@@ -10,10 +10,7 @@ case "$1" in
 
       # fc-cache -v -f
 
-      RUID=$(who | awk 'FNR == 1 {print $1}')
-      if [ -f "/home/$RUID/.hamonikr/plank-panel-top" ] ; then
-        rm -f /home/$RUID/.hamonikr/plank-panel-top
-      fi
+      /usr/local/bin/hamonikr-theme-start restore
 
     ;;
 
