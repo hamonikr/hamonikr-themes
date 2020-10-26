@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ ! -f "/home/$USER/.hamonikr/plank-panel-top" ] ; then
+    # 패널 상단 배치
+    gsettings set org.cinnamon panels-enabled "['1:0:top']"
+    
+    # plank dock launch setting
+    if [ -d "/home/$USER/.config/plank/dock1/launchers" ] ; then
+        cp -af /etc/skel/plank/dock1/launchers/*.dockitem /home/$USER/.config/plank/dock1/launchers/ 
+    fi
+
+    # 테마 설정
+    gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
+    gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-light'
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR-light'
+    gsettings set org.cinnamon.theme name 'HamoniKR-dark'
+
+    # 폰트 설정
+    gsettings set org.cinnamon.desktop.interface font-name 'Noto Sans CJK KR 10'
+    gsettings set org.nemo.desktop font 'Noto Sans CJK KR 10'        
+    gsettings set org.gnome.desktop.interface document-font-name 'Noto Sans CJK KR 10'    
+    gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Noto Sans CJK KR 11'
+    gsettings set org.gnome.desktop.interface monospace-font-name 'Noto Sans CJK KR 11'
+
+    touch /home/$USER/.hamonikr/plank-panel-top    
+fi
+
+exec plank

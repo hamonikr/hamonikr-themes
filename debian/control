@@ -2,14 +2,13 @@ Source: hamonikr-themes
 Section: gnome
 Priority: optional
 Maintainer: HamoniKR <pkg@hamonikr.org>
-Standards-Version: 0.0.9
+Build-Depends: debhelper (>= 9), sassc
+Standards-Version: 3.9.5
 
 Package: hamonikr-themes
+Replaces: libplank-common, mint-clearloox-theme, mint-x-theme, mint-y-theme, mint-z-theme, mint-themes-gtk3, cinnamon-themes, hamonikr-jin-themes
+Conflicts: mint-clearloox-theme, mint-x-theme, mint-y-theme, mint-z-theme, mint-themes-gtk3, cinnamon-themes
+Depends: ${misc:Depends}, plank, fonts-noto-cjk-extra, hamonikr-jin-icon-theme
 Architecture: all
-Depends: mint-backgrounds-tara, mint-themes, mint-x-icons, mint-y-icons
-Conflicts: cinnamon-themes, mint-clearloox-theme, mint-themes-gtk3, mint-x-theme, mint-y-theme, mint-z-theme
-Replaces: mint-themes, cinnamon-themes, gnome-icon-theme, mint-clearloox-theme, mint-themes-gtk3, mint-x-theme, mint-y-theme, mint-z-theme
-Provides: mint-mate-default-settings
-Homepage: https://hamonikr.org
-Description: HamoniKR Themes 
-  하모니카 테마
+Description: HamoniKR gtk and Cinnamon themes
+ Mac like theme for HamoniKR 4.0.

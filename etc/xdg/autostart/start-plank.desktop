@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=plank
+Comment=Start plank
+Exec=plank-start
+Terminal=false
+Type=Application
+StartupNotify=false

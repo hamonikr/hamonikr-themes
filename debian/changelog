@@ -1,5 +1,6 @@
-hamonikr-themes (0.0.9-1) bionic; urgency=medium
+hamonikr-themes (2.0.0) jin; urgency=medium
 
-  * First Commit
+  * Initial release for hamonikr 4.0 Jin 
+  * Added Dependancy hamonikr-jin-icon-theme 
 
- -- HamoniKR <pkg@hamonikr.org>  Fri, 01 Nov 2019 23:02:17 +0900
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 26 Oct 2020 11:17:11 +0900
