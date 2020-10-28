@@ -9,6 +9,10 @@ case "$1" in
 
       # fc-cache -v -f
 
+      RUID=$(who | awk 'FNR == 1 {print $1}')
+      rm -f /home/${RUID}/.hamonikr/hamonikr-theme-start.* || true
+      rm -f /home/${RUID}/.hamonikr/hamonikr-theme-backup.dconf || true      
+
     ;;
     abort-upgrade|abort-remove|abort-deconfigure)
 

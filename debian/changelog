@@ -1,3 +1,21 @@
+hamonikr-themes (2.2.1) jin; urgency=medium
+
+  * Add Panel settings
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 28 Oct 2020 09:32:44 +0900
+
+hamonikr-themes (2.2.0) jin; urgency=medium
+
+  * Add Albert launcher
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 27 Oct 2020 17:11:04 +0900
+
+hamonikr-themes (2.1.1) jin; urgency=medium
+
+  * Add wallpaper setting
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 26 Oct 2020 12:52:02 +0900
+
 hamonikr-themes (2.1.0) jin; urgency=medium
 
   * Add restore and backup feature when remove pkg
