@@ -8,7 +8,7 @@ if [ X$1 == "Xrestore" ] ; then
     # Translate Real Username to Real User ID = 1000
     RUSER_UID=$(id -u ${RUID})
 
-    if [ -f "/home/$USER/.hamonikr/hamonikr-theme-backup.dconf" ] ; then
+    if [ -f "/home/$RUID/.hamonikr/hamonikr-theme-backup.dconf" ] ; then
         echo "Restore previous environment..."
         dconf load / < /home/$RUID/.hamonikr/hamonikr-theme-backup.dconf
         rm -f /home/$RUID/.hamonikr/hamonikr-theme-backup.dconf
