@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Plank
+GenericName=Dock
+Comment=simple Dock
+Categories=Utility;
+Type=Application
+Exec=plank
+Icon=plank
+Terminal=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Hidden=false
+Name[ko_KR]=Plank
+Comment[ko_KR]=간단한 Dock
+X-GNOME-Autostart-Delay=0

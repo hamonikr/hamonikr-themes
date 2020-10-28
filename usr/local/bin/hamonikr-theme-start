@@ -2,18 +2,26 @@
 
 # restore
 if [ X$1 == "Xrestore" ] ; then
+    # 이 부분을 호출하는 프로그램이 dpkg 이므로 실제 사용자의 아이디를 이용해야 동작
+    # Get the Real Username = hamonikr
+    RUID=$(who | awk 'FNR == 1 {print $1}')
+    # Translate Real Username to Real User ID = 1000
+    RUSER_UID=$(id -u ${RUID})
 
     if [ -f "/home/$USER/.hamonikr/hamonikr-theme-backup.dconf" ] ; then
-        dconf load / < /home/$USER/.hamonikr/hamonikr-theme-backup.dconf
-        rm -f /home/$USER/.hamonikr/hamonikr-theme-backup.dconf
+        echo "Restore previous environment..."
+        dconf load / < /home/$RUID/.hamonikr/hamonikr-theme-backup.dconf
+        rm -f /home/$RUID/.hamonikr/hamonikr-theme-backup.dconf
     fi
 
-    if [ -f "/home/$USER/.hamonikr/hamonikr-theme-start.done" ] ; then
-        rm -f /home/$USER/.hamonikr/hamonikr-theme-start.done
+    if [ -f "/home/$RUID/.hamonikr/hamonikr-theme-start.done" ] ; then
+        echo "delete program setting files..."
+        rm -f /home/$RUID/.hamonikr/hamonikr-theme-start.done
     fi    
 
-    if [ -f "HOME/.hamonikr/${0##*/}.log" ] ; then
-        rm -f HOME/.hamonikr/${0##*/}.log
+    if [ -f "/home/$RUID/.hamonikr/${0##*/}.log" ] ; then
+        echo "delete program log files..."    
+        rm -f /home/$RUID/.hamonikr/${0##*/}.log
     fi    
 
 else
@@ -35,8 +43,8 @@ else
         # 패널 설정
         gsettings set org.cinnamon panels-enabled "['1:0:top']"
         gsettings set org.cinnamon panels-height "['1:33']"
-        gsettings set org.cinnamon panel-zone-icon-sizes '[{"panelId": 1, "left": 0, "center": 0, "right": 16}]'
-        gsettings set org.cinnamon panel-zone-symbolic-icon-sizes '[{"panelId": 1, "left": 24, "center": 28, "right": 16}]'
+        gsettings set org.cinnamon panel-zone-icon-sizes '[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
+        gsettings set org.cinnamon panel-zone-symbolic-icon-sizes '[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
 
         # 패널 애플릿 배치
         gsettings set org.cinnamon enabled-applets "['panel1:left:0:menu@cinnamon.org:0', 
@@ -77,7 +85,7 @@ else
         gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-extra/wallpaper-11.jpg"
         gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr-extra/wallpaper-11.jpg"                
         gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr-extra/wallpaper-11.jpg'
-
+        
         # menu logo change
         if [ -f "/home/$USER/.cinnamon/configs/menu@cinnamon.org/0.json" ] ; then
             echo "update hamonikr default logo setting" | tee -a $HOME/.hamonikr/${0##*/}.log
@@ -85,24 +93,15 @@ else
         fi
 
         # plank dock launch setting
-        if [ -d "/home/$USER/.config/plank/dock1/launchers" ] ; then
+        if [ -d "/etc/skel/.config/plank/dock1/launchers" ] ; then
             echo "copy default plank dock settings" | tee -a $HOME/.hamonikr/${0##*/}.log        
-            cp -af /etc/skel/plank/dock1/launchers/*.dockitem /home/$USER/.config/plank/dock1/launchers/ 
+            rm -f /home/$USER/.config/plank/dock1/launchers/*
+            cp -af /etc/skel/.config/plank /home/$USER/.config/
         fi
-
-        # Albert Launcher Settings
-        if [ -f "/etc/skel/.config/albert/albert.conf" ] ; then
-            if [ -f "/usr/share/albert/org.albert.frontend.widgetboxmodel/themes/HamoniKR_Dark.qss" ] ; then
-                echo "copy albert launcher setting" | tee -a $HOME/.hamonikr/${0##*/}.log
-                cp -af /etc/skel/.config/albert/albert.conf /home/$USER/.config/albert/albert.conf
-            fi
-        fi        
 
         touch /home/$USER/.hamonikr/hamonikr-theme-start.done
     fi
-
-    exec plank
-
+    
 fi
 
 

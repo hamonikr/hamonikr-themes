@@ -1,3 +1,22 @@
+hamonikr-themes (2.2.4) jin; urgency=medium
+
+  * transfer albert setting to hamonikr-system-settings
+  * update default plank dock items
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 28 Oct 2020 17:31:01 +0900
+
+hamonikr-themes (2.2.3) jin; urgency=medium
+
+  * Apply albert auto start
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 28 Oct 2020 10:14:41 +0900
+
+hamonikr-themes (2.2.2) jin; urgency=medium
+
+  * copy default conf for albert and plank
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 28 Oct 2020 10:06:38 +0900
+
 hamonikr-themes (2.2.1) jin; urgency=medium
 
   * Add Panel settings

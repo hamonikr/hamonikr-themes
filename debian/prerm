@@ -6,12 +6,13 @@
 set -e
 
 case "$1" in
-    remove|deconfigure|failed-upgrade)
+    remove)
+      /usr/local/bin/hamonikr-theme-start restore
+    ;;
+
+    deconfigure|failed-upgrade)
 
       # fc-cache -v -f
-
-      /usr/local/bin/hamonikr-theme-start restore
-
     ;;
 
     upgrade)
