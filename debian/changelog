@@ -1,3 +1,9 @@
+hamonikr-themes (2.2.5) jin; urgency=medium
+
+  * delete dependancy in control
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 29 Oct 2020 14:10:30 +0900
+
 hamonikr-themes (2.2.4) jin; urgency=medium
 
   * transfer albert setting to hamonikr-system-settings
