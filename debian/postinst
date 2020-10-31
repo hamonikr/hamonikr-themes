@@ -13,6 +13,8 @@ case "$1" in
       rm -f /home/${RUID}/.hamonikr/hamonikr-theme-start.* || true
       rm -f /home/${RUID}/.hamonikr/hamonikr-theme-backup.dconf || true      
 
+      gtk-update-icon-cache || true
+
     ;;
     abort-upgrade|abort-remove|abort-deconfigure)
 

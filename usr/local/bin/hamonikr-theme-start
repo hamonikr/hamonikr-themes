@@ -71,7 +71,7 @@ else
         gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
         gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-light'
         gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR-light'
-        gsettings set org.cinnamon.theme name 'HamoniKR-dark'
+        gsettings set org.cinnamon.theme name 'HamoniKR-light'
 
         # 폰트 설정
         gsettings set org.cinnamon.desktop.interface font-name 'Noto Sans CJK KR 10'
@@ -81,11 +81,34 @@ else
         gsettings set org.gnome.desktop.interface monospace-font-name 'Noto Sans CJK KR 11'
 
         # 바탕화면, greeter 배경화면
-        gsettings set org.cinnamon.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-extra/wallpaper-11.jpg"
-        gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-extra/wallpaper-11.jpg"
-        gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr-extra/wallpaper-11.jpg"                
-        gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr-extra/wallpaper-11.jpg'
-        
+        if [ -d "/usr/share/backgrounds/hamonikr-jin" ] ; then
+            gsettings set org.cinnamon.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-11.jpg"
+            gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-11.jpg"
+            gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-11.jpg"                
+            gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr-jin/wallpaper-11.jpg'
+        fi
+
+        # 하모니카용 터미널 설정으로 반영
+        # 현재 터미널 설정 확인하려면 아래의 명령 사용
+        # dconf dump /org/gnome/terminal/legacy/profiles:/:`gsettings get org.gnome.Terminal.ProfilesList default |  tr -d "'"`/ > terminal.dconf
+        CUR_PF=`gsettings get org.gnome.Terminal.ProfilesList default |  tr -d "'"`
+        dconf load /org/gnome/terminal/legacy/profiles:/:${CUR_PF}/ << EOF
+[/]
+background-color='rgb(0,0,0)'
+background-transparency-percent=20
+bold-color-same-as-fg=true
+cursor-colors-set=false
+default-size-columns=95
+font='Inconsolata Medium 12'
+foreground-color='rgb(211,215,207)'
+highlight-colors-set=false
+palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=true
+visible-name='hamonikr-setting'
+EOF        
         # menu logo change
         if [ -f "/home/$USER/.cinnamon/configs/menu@cinnamon.org/0.json" ] ; then
             echo "update hamonikr default logo setting" | tee -a $HOME/.hamonikr/${0##*/}.log

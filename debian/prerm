@@ -8,14 +8,16 @@ set -e
 case "$1" in
     remove)
       /usr/local/bin/hamonikr-theme-start restore
+      gtk-update-icon-cache || true
     ;;
 
     deconfigure|failed-upgrade)
-
+      gtk-update-icon-cache || true
       # fc-cache -v -f
     ;;
 
     upgrade)
+      gtk-update-icon-cache || true    
     ;;
 
     *)
