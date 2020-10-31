@@ -1,6 +1,6 @@
 stage {
-  font-family: Futura Bk bt, sans, Sans-Serif;
-  font-size: 9pt;
+  font-family: Noto Sans CJK KR,Futura Bk bt, sans, Sans-Serif;
+  font-size: 10pt;
   color: #242424;
 }
 
@@ -174,7 +174,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -slider-height: 4px;
   -slider-background-color: rgba(0, 0, 0, 0.12);
   -slider-border-color: rgba(0, 0, 0, 0);
-  -slider-active-background-color: #0860f2;
+  -slider-active-background-color: #77289c;
   -slider-active-border-color: rgba(0, 0, 0, 0);
   -slider-border-width: 0;
   -slider-handle-radius: 4px;
@@ -1251,7 +1251,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   transition-duration: 300;
   background-color: #f5f5f5;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 3px;
+  border-radius: 30px;
 }
 
 .menu-favorites-button {
@@ -1266,7 +1266,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: 1px solid rgba(0, 0, 0, 0.12);
   background-color: #ffffff;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.12);
-  border-radius: 5px;
+  border-radius: 30px;
 }
 
 .menu-places-box {
