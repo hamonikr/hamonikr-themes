@@ -1420,7 +1420,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #menu-search-entry {
   width: 250px;
-  height: 15px;
+  height: 22px;
   font-weight: normal;
   caret-color: #242424;
 }
