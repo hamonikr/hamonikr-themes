@@ -1,3 +1,9 @@
+hamonikr-themes (2.2.8) jin; urgency=medium
+
+  * fixed search form font size
+
+ -- HamoniKR <pkg@hamonikr.org>  Sat, 31 Oct 2020 18:00:15 +0900
+ 
 hamonikr-themes (2.2.7) jin; urgency=medium
 
   * change menu theme in cinnamon.css
