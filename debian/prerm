@@ -20,6 +20,7 @@ case "$1" in
     ;;
 
     upgrade)
+      /usr/local/bin/hamonikr-theme-start restore
       gtk-update-icon-cache || true    
     ;;
 

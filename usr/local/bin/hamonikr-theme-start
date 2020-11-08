@@ -68,17 +68,28 @@ else
         ]"
 
         # 테마 설정
+        # gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
+        # gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-light'
+        # gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR-light'
+        # gsettings set org.cinnamon.theme name 'HamoniKR-light'
+        # Dark Theme
         gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
-        gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-light'
-        gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR-light'
-        gsettings set org.cinnamon.theme name 'HamoniKR-light'
+        gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-dark'
+        gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR-dark'
+        gsettings set org.cinnamon.theme name 'HamoniKR-dark'
 
         # 폰트 설정
-        gsettings set org.cinnamon.desktop.interface font-name 'Noto Sans CJK KR 10'
-        gsettings set org.nemo.desktop font 'Noto Sans CJK KR 10'        
-        gsettings set org.gnome.desktop.interface document-font-name 'Noto Sans CJK KR 10'    
-        gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Noto Sans CJK KR 11'
-        gsettings set org.gnome.desktop.interface monospace-font-name 'Noto Sans CJK KR 11'
+        # gsettings set org.cinnamon.desktop.interface font-name 'Noto Sans CJK KR 10'
+        # gsettings set org.nemo.desktop font 'Noto Sans CJK KR 10'        
+        # gsettings set org.gnome.desktop.interface document-font-name 'Noto Sans CJK KR 10'    
+        # gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Noto Sans CJK KR 11'
+        # gsettings set org.gnome.desktop.interface monospace-font-name 'Droid Sans Mono 9'        
+        # NEW FONTS
+        gsettings set org.cinnamon.desktop.interface font-name '나눔스퀘어라운드 10'
+        gsettings set org.nemo.desktop font '나눔스퀘어라운드 10'        
+        gsettings set org.gnome.desktop.interface document-font-name '나눔스퀘어라운드 10'    
+        gsettings set org.gnome.desktop.interface monospace-font-name 'Droid Sans Mono 10'
+        gsettings set org.cinnamon.desktop.wm.preferences titlebar-font '나눔스퀘어라운드 Bold 10'
 
         # 바탕화면, greeter 배경화면
         if [ -d "/usr/share/backgrounds/hamonikr-jin" ] ; then
