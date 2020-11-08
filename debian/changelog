@@ -1,3 +1,10 @@
+hamonikr-themes (2.2.9) jin; urgency=medium
+
+  * update postinst and prerm script
+   - adjust this.selectedAppBox.set_height(0)
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 08 Nov 2020 13:32:48 +0900
+
 hamonikr-themes (2.2.8) jin; urgency=medium
 
   * fixed search form font size

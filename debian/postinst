@@ -7,7 +7,9 @@ set -e
 case "$1" in
     configure)
 
-      # fc-cache -v -f
+      if [ -f "/usr/share/cinnamon/applets/menu@cinnamon.org/applet.js"] ; then
+        sed -i 's|this.selectedAppBox.set_height(0);|//this.selectedAppBox.set_height(0);|g' /usr/share/cinnamon/applets/menu@cinnamon.org/applet.js
+      fi
 
       RUID=$(who | awk 'FNR == 1 {print $1}')
       rm -f /home/${RUID}/.hamonikr/hamonikr-theme-start.* || true
