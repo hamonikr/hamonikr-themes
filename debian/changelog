@@ -1,3 +1,10 @@
+hamonikr-themes (2.3.0) jin; urgency=medium
+
+  * update postinst and prerm script
+   - fixed bug for sed to this.selectedAppBox.set_height(0)
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 08 Nov 2020 13:46:50 +0900
+
 hamonikr-themes (2.2.9) jin; urgency=medium
 
   * update postinst and prerm script

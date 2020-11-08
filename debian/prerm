@@ -8,9 +8,7 @@ set -e
 case "$1" in
     remove)
 
-      if [ -f "/usr/share/cinnamon/applets/menu@cinnamon.org/applet.js"] ; then
-        sed -i 's|//this.selectedAppBox.set_height(0);|this.selectedAppBox.set_height(0);|g' /usr/share/cinnamon/applets/menu@cinnamon.org/applet.js
-      fi    
+      sed -i 's|//this.selectedAppBox.set_height(0);|this.selectedAppBox.set_height(0);|g' /usr/share/cinnamon/applets/menu@cinnamon.org/applet.js || true
 
       /usr/local/bin/hamonikr-theme-start restore
       gtk-update-icon-cache || true
