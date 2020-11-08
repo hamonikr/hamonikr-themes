@@ -74,8 +74,8 @@ else
         # gsettings set org.cinnamon.theme name 'HamoniKR-light'
         # Dark Theme
         gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
-        gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-dark'
-        gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR-dark'
+        gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-light'
+        gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR-light'
         gsettings set org.cinnamon.theme name 'HamoniKR-dark'
 
         # 폰트 설정

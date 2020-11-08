@@ -1,3 +1,10 @@
+hamonikr-themes (2.3.2) jin; urgency=medium
+
+  * update usr/local/bin/hamonikr-theme-start
+   - Changed gtk, wm default setting to HamoniKR-light
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 08 Nov 2020 16:12:24 +0900
+
 hamonikr-themes (2.3.1) jin; urgency=medium
 
   * update usr/local/bin/hamonikr-theme-start
