@@ -1,3 +1,10 @@
+hamonikr-themes (2.3.3) jin; urgency=medium
+
+  * update usr/local/bin/hamonikr-theme-start
+   - Resotre Default theme when remove this package
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 09 Nov 2020 18:40:37 +0900
+
 hamonikr-themes (2.3.2) jin; urgency=medium
 
   * update usr/local/bin/hamonikr-theme-start

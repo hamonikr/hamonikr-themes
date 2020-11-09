@@ -10,7 +10,7 @@ case "$1" in
 
       sed -i 's|//this.selectedAppBox.set_height(0);|this.selectedAppBox.set_height(0);|g' /usr/share/cinnamon/applets/menu@cinnamon.org/applet.js || true
 
-      /usr/local/bin/hamonikr-theme-start restore
+      /usr/local/bin/hamonikr-theme-start restore || true
       gtk-update-icon-cache || true
     ;;
 
@@ -20,7 +20,7 @@ case "$1" in
     ;;
 
     upgrade)
-      /usr/local/bin/hamonikr-theme-start restore
+      /usr/local/bin/hamonikr-theme-start restore || true
       gtk-update-icon-cache || true    
     ;;
 

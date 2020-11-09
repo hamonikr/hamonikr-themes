@@ -22,7 +22,12 @@ if [ X$1 == "Xrestore" ] ; then
     if [ -f "/home/$RUID/.hamonikr/${0##*/}.log" ] ; then
         echo "delete program log files..."    
         rm -f /home/$RUID/.hamonikr/${0##*/}.log
-    fi    
+    fi
+
+    if [ -f "/home/$RUID/.hamonikr/default_dconf.done" ] ; then
+        echo "Restore Default environment..."
+        rm -f /home/$RUID/.hamonikr/default_dconf.done
+    fi
 
 else
 
