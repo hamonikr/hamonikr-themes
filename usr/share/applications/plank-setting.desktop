@@ -8,6 +8,6 @@ Comment=Stupidly simple.
 Categories=Utility;
 Type=Application
 Exec=plank --preferences
-Icon=plank-setting
+Icon=/usr/share/icons/HamoniKR/apps/scalable/plank-setting.svg
 Terminal=false
 NoDisplay=false

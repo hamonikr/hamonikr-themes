@@ -1,3 +1,11 @@
+hamonikr-themes (2.3.4) jin; urgency=medium
+
+  * update usr/share/applications/plank-settings.desktop
+   - Change 'Icon' path
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 10 Nov 2020 16:43:04 +0900
+
+
 hamonikr-themes (2.3.3) jin; urgency=medium
 
   * update usr/local/bin/hamonikr-theme-start
