@@ -1,3 +1,13 @@
+hamonikr-themes (2.3.5) jin; urgency=medium
+
+  * Add etc/skel/.config/plank/dock1/launchers/io.github.celluloid_player.Celluloid.dockitem
+  * Add etc/skel/.config/plank/dock1/launchers/system-shutdown.dockitem
+  * Update usr/local/bin/hamonikr-theme-start
+   - Apply plank dockitems Index
+   - Add plank dockitems(shutdown, celluiod)
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 12 Nov 2020 11:12:42 +0900
+
 hamonikr-themes (2.3.4) jin; urgency=medium
 
   * update usr/share/applications/plank-settings.desktop

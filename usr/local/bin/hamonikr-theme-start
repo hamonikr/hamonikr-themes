@@ -104,6 +104,9 @@ else
             gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr-jin/wallpaper-11.jpg'
         fi
 
+        # plank dockitems Index
+        gsettings set net.launchpad.plank.docks.dock1 dock-items "['naver-whale.dockitem', 'nemo.dockitem', 'org.gnome.Terminal.dockitem', 'code.dockitem', 'xed.dockitem', 'org.remmina.Remmina.dockitem', 'io.github.celluloid_player.Celluloid.dockitem', 'filezilla.dockitem', 'pinta.dockitem', 'rhythmbox.dockitem', 'mintinstall.dockitem', 'trash.dockitem', 'desktop.dockitem', 'system-shutdown.dockitem']"
+
         # menu logo change
         if [ -f "/home/$USER/.cinnamon/configs/menu@cinnamon.org/0.json" ] ; then
             echo "update hamonikr default logo setting" | tee -a $HOME/.hamonikr/${0##*/}.log
