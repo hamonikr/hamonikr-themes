@@ -98,10 +98,10 @@ else
 
         # 바탕화면, greeter 배경화면
         if [ -d "/usr/share/backgrounds/hamonikr-jin" ] ; then
-            gsettings set org.cinnamon.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-11.jpg"
-            gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-11.jpg"
-            gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-11.jpg"                
-            gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr-jin/wallpaper-11.jpg'
+            gsettings set org.cinnamon.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg"
+            gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg"
+            gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg"                
+            gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg'
         fi
 
         # plank dockitems Index

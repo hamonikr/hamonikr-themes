@@ -1,3 +1,10 @@
+hamonikr-themes (2.3.7) jin; urgency=medium
+
+  * Update usr/local/bin/hamonikr-theme-start
+   - Change default background image
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 12 Nov 2020 13:11:33 +0900
+
 hamonikr-themes (2.3.6) jin; urgency=medium
 
   * Update etc/skel/.config/plank/dock1/launchers/io.github.celluloid_player.Celluloid.dockitem
