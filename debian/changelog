@@ -1,3 +1,11 @@
+hamonikr-themes (2.3.6) jin; urgency=medium
+
+  * Update etc/skel/.config/plank/dock1/launchers/io.github.celluloid_player.Celluloid.dockitem
+  * Update etc/skel/.config/plank/dock1/launchers/system-shutdown.dockitem
+   - Fixed path in files
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 12 Nov 2020 11:28:09 +0900
+
 hamonikr-themes (2.3.5) jin; urgency=medium
 
   * Add etc/skel/.config/plank/dock1/launchers/io.github.celluloid_player.Celluloid.dockitem

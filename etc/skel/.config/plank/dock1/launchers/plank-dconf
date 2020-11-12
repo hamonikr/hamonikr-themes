@@ -1,0 +1,21 @@
+[/]
+alignment='center'
+auto-pinning=true 
+current-workspace-only=false
+dock-items=['naver-whale.dockitem', 'nemo.dockitem', 'xed.dockitem', 'org.remmina.Remmina.dockitem', 'io.github.celluloid_player.Celluloid.dockitem', 'pinta.dockitem', 'rhythmbox.dockitem', 'code.dockitem', 'filezilla.dockitem', 'mintinstall.dockitem', 'desktop.dockitem', 'trash.dockitem', 'system-shutdown.dockitem']
+hide-delay=0
+hide-mode='intelligent'
+icon-size=48
+items-alignment='center'
+lock-items=false
+monitor=''
+offset=0 
+pinned-only=false
+position='bottom'
+pressure-reveal=false
+show-dock-item=false
+theme='Default'
+tooltips-enabled=true
+unhide-delay=0
+zoom-enabled=false
+zoom-percent=150

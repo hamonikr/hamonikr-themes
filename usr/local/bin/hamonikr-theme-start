@@ -105,7 +105,7 @@ else
         fi
 
         # plank dockitems Index
-        gsettings set net.launchpad.plank.docks.dock1 dock-items "['naver-whale.dockitem', 'nemo.dockitem', 'org.gnome.Terminal.dockitem', 'code.dockitem', 'xed.dockitem', 'org.remmina.Remmina.dockitem', 'io.github.celluloid_player.Celluloid.dockitem', 'filezilla.dockitem', 'pinta.dockitem', 'rhythmbox.dockitem', 'mintinstall.dockitem', 'trash.dockitem', 'desktop.dockitem', 'system-shutdown.dockitem']"
+        # gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ dock-items "['naver-whale.dockitem', 'nemo.dockitem', 'org.gnome.Terminal.dockitem', 'code.dockitem', 'xed.dockitem', 'org.remmina.Remmina.dockitem', 'io.github.celluloid_player.Celluloid.dockitem', 'filezilla.dockitem', 'pinta.dockitem', 'rhythmbox.dockitem', 'mintinstall.dockitem', 'trash.dockitem', 'desktop.dockitem', 'system-shutdown.dockitem']"
 
         # menu logo change
         if [ -f "/home/$USER/.cinnamon/configs/menu@cinnamon.org/0.json" ] ; then
