@@ -1,1 +1,105 @@
 @import url("resource:///org/gnome/theme/gtk.css");
+
+entry {
+  border: 1px solid;
+  padding: 5px 8px;
+  caret-color: currentColor;
+  border-radius: 3px;
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  color: #303030;
+  border-color: #BABABA;
+  background-color: #ffffff; }
+  entry.search {
+    border-radius: 4px; }
+  entry image {
+    color: #595959; }
+    entry image.left {
+      padding-left: 0;
+      padding-right: 5px; }
+    entry image.right {
+      padding-right: 0;
+      padding-left: 5px; }
+  entry.flat, entry.flat:focus {
+    padding: 2px;
+    color: #303030;
+    border-color: #BABABA;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0; }
+  entry:focus {
+    background-clip: border-box;
+    color: #303030;
+    border-color: #0860f2;
+    background-color: #ffffff; }
+  entry:disabled {
+    color: rgba(48, 48, 48, 0.55);
+    border-color: rgba(186, 186, 186, 0.55);
+    background-color: rgba(255, 255, 255, 0.55); }
+  entry.warning {
+    color: white;
+    border-color: #f27835;
+    background-color: #f7ae86; }
+    entry.warning image {
+      color: white; }
+    entry.warning:focus {
+      color: white;
+      background-color: #f27835;
+      box-shadow: none; }
+    entry.warning selection, entry.warning selection:focus {
+      background-color: white;
+      color: #f27835; }
+  entry.error {
+    color: white;
+    border-color: #FC4138;
+    background-color: #fd8d88; }
+    entry.error image {
+      color: white; }
+    entry.error:focus {
+      color: white;
+      background-color: #FC4138;
+      box-shadow: none; }
+    entry.error selection, entry.error selection:focus {
+      background-color: white;
+      color: #FC4138; }
+  entry.search-missing {
+    color: white;
+    border-color: #FC4138;
+    background-color: #fd8d88; }
+    entry.search-missing image {
+      color: white; }
+    entry.search-missing:focus {
+      color: white;
+      background-color: #FC4138;
+      box-shadow: none; }
+    entry.search-missing selection, entry.search-missing selection:focus {
+      background-color: white;
+      color: #FC4138; }
+  entry:drop(active):focus, entry:drop(active) {
+    border-color: #0860f2;
+    box-shadow: none; }
+  .osd entry {
+    color: #dbdbdb;
+    border-color: rgba(33, 33, 33, 0.4);
+    background-color: rgba(120, 120, 120, 0.4); }
+    .osd entry image, .osd entry image:hover {
+      color: inherit; }
+    .osd entry:focus {
+      color: #ffffff;
+      border-color: rgba(33, 33, 33, 0.4);
+      background-color: #0860f2; }
+    .osd entry:disabled {
+      color: rgba(219, 219, 219, 0.55);
+      background-color: rgba(120, 120, 120, 0.25); }
+    .osd entry selection:focus, .osd entry selection {
+      color: #0860f2;
+      background-color: #ffffff; }
+  entry progress {
+    margin: 0 -6px;
+    border-radius: 0;
+    border-width: 0 0 2px;
+    border-color: #0860f2;
+    border-style: solid;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none; }
+
