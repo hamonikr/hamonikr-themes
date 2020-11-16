@@ -73,23 +73,12 @@ else
         ]"
 
         # 테마 설정
-        # gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
-        # gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-light'
-        # gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR-light'
-        # gsettings set org.cinnamon.theme name 'HamoniKR-light'
-        # Dark Theme
         gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
         gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-light'
         gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR-light'
         gsettings set org.cinnamon.theme name 'HamoniKR-dark'
 
         # 폰트 설정
-        # gsettings set org.cinnamon.desktop.interface font-name 'Noto Sans CJK KR 10'
-        # gsettings set org.nemo.desktop font 'Noto Sans CJK KR 10'        
-        # gsettings set org.gnome.desktop.interface document-font-name 'Noto Sans CJK KR 10'    
-        # gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Noto Sans CJK KR 11'
-        # gsettings set org.gnome.desktop.interface monospace-font-name 'Droid Sans Mono 9'        
-        # NEW FONTS
         gsettings set org.cinnamon.desktop.interface font-name '나눔스퀘어라운드 10'
         gsettings set org.nemo.desktop font '나눔스퀘어라운드 10'        
         gsettings set org.gnome.desktop.interface document-font-name '나눔스퀘어라운드 10'    
@@ -105,7 +94,7 @@ else
         fi
 
         # plank dockitems Index
-        # gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ dock-items "['naver-whale.dockitem', 'nemo.dockitem', 'org.gnome.Terminal.dockitem', 'code.dockitem', 'xed.dockitem', 'org.remmina.Remmina.dockitem', 'io.github.celluloid_player.Celluloid.dockitem', 'filezilla.dockitem', 'pinta.dockitem', 'rhythmbox.dockitem', 'mintinstall.dockitem', 'trash.dockitem', 'desktop.dockitem', 'system-shutdown.dockitem']"
+        gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ dock-items "['desktop.dockitem', 'nemo.dockitem', 'naver-whale.dockitem', 'org.gnome.Terminal.dockitem', 'xed.dockitem', 'code.dockitem', 'libreoffice-writer.dockitem', 'libreoffice-impress.dockitem', 'libreoffice-calc.dockitem', 'com.github.maoschanz.drawing.dockitem', 'io.github.celluloid_player.Celluloid.dockitem', 'rhythmbox.dockitem', 'stacer.dockitem', 'mintinstall.dockitem', 'trash.dockitem', 'cinnamon-settings.dockitem', 'system-shutdown.dockitem']"
 
         # menu logo change
         if [ -f "/home/$USER/.cinnamon/configs/menu@cinnamon.org/0.json" ] ; then
