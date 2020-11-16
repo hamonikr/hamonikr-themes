@@ -1,3 +1,10 @@
+hamonikr-themes (2.4.0) jin; urgency=medium
+
+  * Update etc/skel/.config/plank/dock1/launchers dir
+   - Remove libre office dock items
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 16 Nov 2020 14:22:07 +0900
+
 hamonikr-themes (2.3.9) jin; urgency=medium
 
   * Update etc/skel/.config/plank/dock1/launchers dir
