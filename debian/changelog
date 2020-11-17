@@ -1,3 +1,10 @@
+hamonikr-themes (2.4.2) jin; urgency=medium
+
+  * Update usr/share/themes/HamoniKR-dark/cinnamon/cinnamon.css
+   - Changed startmenu themes
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 17 Nov 2020 19:38:54 +0900
+
 hamonikr-themes (2.4.1) jin; urgency=medium
 
   * Update debian/control
