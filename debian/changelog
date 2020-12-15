@@ -1,3 +1,10 @@
+hamonikr-themes (2.4.3) jin; urgency=medium
+
+  * changed /usr/share/themes/HamoniKR-Jin-light/gtk-2.0/main.rc
+   - WPS Office 'save as' gtk Treeview fixed
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 15 Dec 2020 10:36:47 +0900
+
 hamonikr-themes (2.4.2) jin; urgency=medium
 
   * Update usr/share/themes/HamoniKR-dark/cinnamon/cinnamon.css

@@ -59,8 +59,9 @@ style "default" {
   GtkTreeView::expander-size = 11
   GtkTreeView::vertical-separator = 4
   GtkTreeView::horizontal-separator = 4
-  GtkTreeView::allow-rules = 1
-  GtkTreeView::odd_row_color = shade(0.98, @base_color)
+  GtkTreeView::allow-rules = 0
+  GtkTreeView::odd_row_color   = @base_color
+  GtkTreeView::even-row-color  = @base_color
 
   GtkExpander::expander-size = 11
 
@@ -528,6 +529,31 @@ style "default" {
       file = "assets/null.png"
       border = { 4, 4, 4, 4 }
       stretch = TRUE
+    }
+    #############
+    # Treeviews #
+    #############
+
+    # Disable active the column highlight
+    # We need to match specific cells or we break stuff
+    # Looking at you deadbeef
+
+    image {
+      function = FLAT_BOX
+      detail   = "cell_even_sorted"
+      state    = NORMAL
+    }
+
+    image {
+      function = FLAT_BOX
+      detail   = "cell_odd_sorted"
+      state    = NORMAL
+    }
+
+    # Disable all the other shadows
+    # This prevents the Raleigh effect
+    image {
+      function = SHADOW
     }
   }
 }
