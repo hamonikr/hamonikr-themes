@@ -1,3 +1,10 @@
+hamonikr-themes (2.4.4) jin; urgency=medium
+
+  * changed /usr/share/themes/HamoniKR-light/cinnamon/cinnamon.css
+   - fix volume image color change
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 04 Mar 2021 10:27:15 +0900
+
 hamonikr-themes (2.4.3) jin; urgency=medium
 
   * changed /usr/share/themes/HamoniKR-Jin-light/gtk-2.0/main.rc
