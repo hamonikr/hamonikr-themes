@@ -1,3 +1,11 @@
+hamonikr-themes (3.0.1) stable; urgency=medium
+
+  * Update usr/local/bin/hamonikr-theme-start
+   - change panel location to bottom
+   - removed keyboard applet
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 05 Mar 2021 17:50:20 +0900
+
 hamonikr-themes (3.0.0) stable; urgency=medium
 
   * Release for server-2.0
