@@ -1,3 +1,10 @@
+hamonikr-themes (3.0.0) stable; urgency=medium
+
+  * Release for server-2.0
+   - remove plank settings
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 05 Mar 2021 17:50:20 +0900
+
 hamonikr-themes (2.4.4) jin; urgency=medium
 
   * changed /usr/share/themes/HamoniKR-light/cinnamon/cinnamon.css

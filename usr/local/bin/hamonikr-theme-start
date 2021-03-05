@@ -74,9 +74,9 @@ else
 
         # 테마 설정
         gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
-        gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-light'
-        gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR-light'
-        gsettings set org.cinnamon.theme name 'HamoniKR-dark'
+        gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR'
+        gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR'
+        gsettings set org.cinnamon.theme name 'HamoniKR'
 
         # 폰트 설정
         gsettings set org.cinnamon.desktop.interface font-name '나눔스퀘어라운드 10'
@@ -85,30 +85,12 @@ else
         gsettings set org.gnome.desktop.interface monospace-font-name 'Droid Sans Mono 10'
         gsettings set org.cinnamon.desktop.wm.preferences titlebar-font '나눔스퀘어라운드 Bold 10'
 
-        # 바탕화면, greeter 배경화면
-        if [ -d "/usr/share/backgrounds/hamonikr-jin" ] ; then
-            gsettings set org.cinnamon.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg"
-            gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg"
-            gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg"                
-            gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg'
-        fi
-
-        # plank dockitems Index
-        gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ dock-items "['desktop.dockitem', 'nemo.dockitem', 'naver-whale.dockitem', 'org.gnome.Terminal.dockitem', 'xed.dockitem', 'code.dockitem', 'libreoffice-writer.dockitem', 'libreoffice-impress.dockitem', 'libreoffice-calc.dockitem', 'com.github.maoschanz.drawing.dockitem', 'io.github.celluloid_player.Celluloid.dockitem', 'rhythmbox.dockitem', 'stacer.dockitem', 'mintinstall.dockitem', 'trash.dockitem', 'cinnamon-settings.dockitem', 'system-shutdown.dockitem']"
-
         # menu logo change
         if [ -f "/home/$USER/.cinnamon/configs/menu@cinnamon.org/0.json" ] ; then
             echo "update hamonikr default logo setting" | tee -a $HOME/.hamonikr/${0##*/}.log
             sed -i 's/"value": "linuxmint-logo-ring-symbolic"/"value": "hamonikr-logo"/g' /home/$USER/.cinnamon/configs/menu@cinnamon.org/0.json
         fi
-
-        # plank dock launch setting
-        if [ -d "/etc/skel/.config/plank/dock1/launchers" ] ; then
-            echo "copy default plank dock settings" | tee -a $HOME/.hamonikr/${0##*/}.log        
-            rm -f /home/$USER/.config/plank/dock1/launchers/*
-            cp -af /etc/skel/.config/plank /home/$USER/.config/
-        fi
-
+        
         touch /home/$USER/.hamonikr/hamonikr-theme-start.done
     fi
     
