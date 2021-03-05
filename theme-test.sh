@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# test after change theme
+
 sudo cp -af usr/share/themes/HamoniKR ~/.local/share/themes/
 
 RUID=$(who | awk 'FNR == 1 {print $1}')
