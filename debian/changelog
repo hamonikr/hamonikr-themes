@@ -1,3 +1,95 @@
+hamonikr-themes (4.2.0) taebaek; urgency=medium
+
+  [Kevin Kim]
+  * Release for HamoniKR 6.0
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 09 Oct 2022 16:05:10 +0900
+
+hamonikr-themes (4.1.0) hanla; urgency=medium
+
+  * add cursor-theme change code
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 23 Sep 2021 13:32:05 +0900
+
+hamonikr-themes (4.0.9) hanla; urgency=medium
+
+  * combine hamonikr-themes-extra package
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 24 Jun 2021 10:03:13 +0900
+
+hamonikr-themes (4.0.8) hanla; urgency=medium
+
+  * change theme name jin to hanla
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 17 Jun 2021 18:28:38 +0900
+
+hamonikr-themes (4.0.7) public; urgency=medium
+
+  * replace & conflict hamonikr-jin-themes, hamonikr-artwork
+  * delete preinst code > rm /etc/hamonikr-theme.desktop
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 04 May 2021 11:35:45 +0900
+
+hamonikr-themes (4.0.6) public; urgency=medium
+
+  * fix delete name hamonikr-theme-start.desktop > hamonikr-theme.desktop
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 03 May 2021 18:48:56 +0900
+
+hamonikr-themes (4.0.5) public; urgency=medium
+
+  * remove /etc/xdg/autostart/hamonikr-theme-start file
+    - if not remove this file > prerm remove this file
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 03 May 2021 16:08:46 +0900
+
+hamonikr-themes (4.0.4) public; urgency=medium
+
+  * Add X-GNOME-Autostart-Delay in hamonikr-theme.desktop
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 15 Apr 2021 16:45:03 +0900
+
+hamonikr-themes (4.0.3) public; urgency=medium
+
+  * Fix postinst
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 15 Apr 2021 15:37:02 +0900
+
+hamonikr-themes (4.0.2) public; urgency=medium
+
+  * Fix Jin Function location
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 15 Apr 2021 02:25:57 +0900
+
+hamonikr-themes (4.0.1) public; urgency=medium
+
+  * Change /usr/local/bin/hamonikr-theme-start code
+  * Change /etc/xdg/autostart/hamonikr-theme.desktop > /etc/skel/.config/autostart
+   - add postinst cp code
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 14 Apr 2021 09:56:39 +0900
+
+hamonikr-themes (4.0.0) public; urgency=medium
+
+  * Release for HamoniKR 5.0
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 08 Apr 2021 12:07:12 +0900
+
+hamonikr-themes (3.0.1) stable; urgency=medium
+
+  * Update usr/local/bin/hamonikr-theme-start
+   - change panel location to bottom
+   - removed keyboard applet
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 05 Mar 2021 17:50:20 +0900
+
+hamonikr-themes (3.0.0) stable; urgency=medium
+
+  * Release for server-2.0
+   - remove plank settings
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 05 Mar 2021 17:50:20 +0900
+
 hamonikr-themes (2.4.4) jin; urgency=medium
 
   * changed /usr/share/themes/HamoniKR-light/cinnamon/cinnamon.css

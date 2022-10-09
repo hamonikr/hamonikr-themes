@@ -1,117 +1,170 @@
 #!/bin/bash
 
-# restore
-if [ X$1 == "Xrestore" ] ; then
-    # 이 부분을 호출하는 프로그램이 dpkg 이므로 실제 사용자의 아이디를 이용해야 동작
-    # Get the Real Username = hamonikr
-    RUID=$(who | awk 'FNR == 1 {print $1}')
-    # Translate Real Username to Real User ID = 1000
-    RUSER_UID=$(id -u ${RUID})
+# make directory
+mkdir -p /home/$USER/.hamonikr/themes/{log,save,done}
 
-    if [ -f "/home/$RUID/.hamonikr/hamonikr-theme-backup.dconf" ] ; then
-        echo "Restore previous environment..."
-        dconf load / < /home/$RUID/.hamonikr/hamonikr-theme-backup.dconf
-        rm -f /home/$RUID/.hamonikr/hamonikr-theme-backup.dconf
-    fi
-
-    if [ -f "/home/$RUID/.hamonikr/hamonikr-theme-start.done" ] ; then
-        echo "delete program setting files..."
-        rm -f /home/$RUID/.hamonikr/hamonikr-theme-start.done
-    fi    
-
-    if [ -f "/home/$RUID/.hamonikr/${0##*/}.log" ] ; then
-        echo "delete program log files..."    
-        rm -f /home/$RUID/.hamonikr/${0##*/}.log
-    fi
-
-    if [ -f "/home/$RUID/.hamonikr/default_dconf.done" ] ; then
-        echo "Restore Default environment..."
-        rm -f /home/$RUID/.hamonikr/default_dconf.done
-    fi
-
-else
-
-    touch $HOME/.hamonikr/${0##*/}.log
-    echo "$(date +%Y-%m-%d_%H:%M) : ${0##*/} $1 running." | tee $HOME/.hamonikr/${0##*/}.log
-
-    # icon, gtk theme, cursor setting
-    if [ ! -f "/home/$USER/.hamonikr/hamonikr-theme-start.done" ] ; then
-
-        # backup current desktop settings
-        if command -v dconf &> /dev/null
-        then
-            dconf dump / > /home/$USER/.hamonikr/hamonikr-theme-backup.dconf
-        fi
-
-        echo "update default desktop settings" | tee -a $HOME/.hamonikr/${0##*/}.log
-
-        # 패널 설정
-        gsettings set org.cinnamon panels-enabled "['1:0:top']"
-        gsettings set org.cinnamon panels-height "['1:33']"
-        gsettings set org.cinnamon panel-zone-icon-sizes '[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
-        gsettings set org.cinnamon panel-zone-symbolic-icon-sizes '[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
-
-        # 패널 애플릿 배치
-        gsettings set org.cinnamon enabled-applets "['panel1:left:0:menu@cinnamon.org:0', 
-        'panel1:left:1:grouped-window-list@cinnamon.org:1', 
-        'panel1:right:0:scale@cinnamon.org:2', 
-        'panel1:right:1:expo@cinnamon.org:3', 
-        'panel1:right:2:xrandr@cinnamon.org:4', 
-        'panel1:right:3:systray@cinnamon.org:5', 
-        'panel1:right:4:notifications@cinnamon.org:6', 
-        'panel1:right:5:printers@cinnamon.org:7', 
-        'panel1:right:6:removable-drives@cinnamon.org:8', 
-        'panel1:right:7:keyboard@cinnamon.org:9', 
-        'panel1:right:8:bluetooth@cinnamon.org:10', 
-        'panel1:right:9:network@cinnamon.org:11', 
-        'panel1:right:10:sound@cinnamon.org:12', 
-        'panel1:right:11:power@cinnamon.org:13', 
-        'panel1:right:12:calendar@cinnamon.org:14',
-        'panel1:right:13:weather@mockturtl:15', 
-        'panel1:right:14:show-desktop@cinnamon.org:16', 
-        'panel1:right:15:user@cinnamon.org:17'
-        ]"
-
-        # 테마 설정
-        gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
-        gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-light'
-        gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR-light'
-        gsettings set org.cinnamon.theme name 'HamoniKR-dark'
-
-        # 폰트 설정
-        gsettings set org.cinnamon.desktop.interface font-name '나눔스퀘어라운드 10'
-        gsettings set org.nemo.desktop font '나눔스퀘어라운드 10'        
-        gsettings set org.gnome.desktop.interface document-font-name '나눔스퀘어라운드 10'    
-        gsettings set org.gnome.desktop.interface monospace-font-name 'Droid Sans Mono 10'
-        gsettings set org.cinnamon.desktop.wm.preferences titlebar-font '나눔스퀘어라운드 Bold 10'
-
-        # 바탕화면, greeter 배경화면
-        if [ -d "/usr/share/backgrounds/hamonikr-jin" ] ; then
-            gsettings set org.cinnamon.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg"
-            gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg"
-            gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg"                
-            gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr-jin/wallpaper-01.jpg'
-        fi
-
-        # plank dockitems Index
-        gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ dock-items "['desktop.dockitem', 'nemo.dockitem', 'naver-whale.dockitem', 'org.gnome.Terminal.dockitem', 'xed.dockitem', 'code.dockitem', 'libreoffice-writer.dockitem', 'libreoffice-impress.dockitem', 'libreoffice-calc.dockitem', 'com.github.maoschanz.drawing.dockitem', 'io.github.celluloid_player.Celluloid.dockitem', 'rhythmbox.dockitem', 'stacer.dockitem', 'mintinstall.dockitem', 'trash.dockitem', 'cinnamon-settings.dockitem', 'system-shutdown.dockitem']"
-
-        # menu logo change
-        if [ -f "/home/$USER/.cinnamon/configs/menu@cinnamon.org/0.json" ] ; then
-            echo "update hamonikr default logo setting" | tee -a $HOME/.hamonikr/${0##*/}.log
-            sed -i 's/"value": "linuxmint-logo-ring-symbolic"/"value": "hamonikr-logo"/g' /home/$USER/.cinnamon/configs/menu@cinnamon.org/0.json
-        fi
-
-        # plank dock launch setting
-        if [ -d "/etc/skel/.config/plank/dock1/launchers" ] ; then
-            echo "copy default plank dock settings" | tee -a $HOME/.hamonikr/${0##*/}.log        
-            rm -f /home/$USER/.config/plank/dock1/launchers/*
-            cp -af /etc/skel/.config/plank /home/$USER/.config/
-        fi
-
-        touch /home/$USER/.hamonikr/hamonikr-theme-start.done
-    fi
+case $1 in
+  # default theme
+  default )
+    echo "$(date +%Y-%m-%d_%H:%M) : ${0##*/} $1 running." | tee $HOME/.hamonikr/themes/log/${0##*/}.log
     
-fi
+    if [ -f /home/$USER/.config/autostart/hamonikr-theme.desktop ] ; then
+      SELECT=`cat /home/$USER/.config/autostart/hamonikr-theme.desktop | grep Exec`
+      sed -i "s/$SELECT/Exec=hamonikr-theme-start default/g" /home/$USER/.config/autostart/hamonikr-theme.desktop
+    fi
 
+    touch /home/$USER/.hamonikr/themes/done/hamonikr-theme-start.done
+    THEME=`cat /home/$USER/.hamonikr/themes/done/hamonikr-theme-start.done`
+
+    if [ "$THEME" != "default" ] ; then
+      # icon, gtk theme, cursor setting
+      echo "update default desktop settings" | tee -a $HOME/.hamonikr/themes/log/${0##*/}.log
+      
+      # 현재 상태 저장
+      $0 save
+
+      # 패널 설정
+      gsettings set org.cinnamon panels-enabled "['1:0:top']"
+      gsettings set org.cinnamon panels-height "['1:33']"
+      gsettings set org.cinnamon panel-zone-icon-sizes '[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
+      gsettings set org.cinnamon panel-zone-symbolic-icon-sizes '[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
+
+      # 패널 애플릿 배치
+      gsettings set org.cinnamon enabled-applets "['panel1:left:0:menu@cinnamon.org:0', 
+      'panel1:left:1:grouped-window-list@cinnamon.org:1', 
+      'panel1:right:0:scale@cinnamon.org:2', 
+      'panel1:right:1:expo@cinnamon.org:3', 
+      'panel1:right:3:systray@cinnamon.org:5', 
+      'panel1:right:4:notifications@cinnamon.org:6', 
+      'panel1:right:5:printers@cinnamon.org:7', 
+      'panel1:right:6:removable-drives@cinnamon.org:8', 
+      'panel1:right:8:bluetooth@cinnamon.org:10', 
+      'panel1:right:9:network@cinnamon.org:11', 
+      'panel1:right:10:sound@cinnamon.org:12', 
+      'panel1:right:11:power@cinnamon.org:13', 
+      'panel1:right:12:calendar@cinnamon.org:14',
+      'panel1:right:14:show-desktop@cinnamon.org:16', 
+      'panel1:right:15:user@cinnamon.org:17'
+      ]"
+
+      # 테마 설정
+      gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
+      gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR'
+      gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR'
+      gsettings set org.cinnamon.theme name 'HamoniKR-dark'
+      gsettings set org.cinnamon.desktop.interface cursor-theme 'HamoniKR-Cursor'
+
+      # 폰트 설정
+      gsettings set org.cinnamon.desktop.interface font-name '나눔스퀘어라운드 10'
+      gsettings set org.nemo.desktop font '나눔스퀘어라운드 10'        
+      gsettings set org.gnome.desktop.interface document-font-name '나눔스퀘어라운드 10'    
+      gsettings set org.gnome.desktop.interface monospace-font-name 'Hack Nerd Font 10'
+      gsettings set org.cinnamon.desktop.wm.preferences titlebar-font '나눔스퀘어라운드 Bold 10'
+
+      # 바탕화면, greeter 배경화면
+      gsettings set org.cinnamon.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr/default_background.jpg"
+      gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr/default_background.jpg"
+      gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr/default_background.jpg"                
+      gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr/default_background.jpg'
+
+      # menu logo change
+      if [ -f "/home/$USER/.cinnamon/configs/menu@cinnamon.org/0.json" ] ; then
+          echo "update hamonikr default logo setting" | tee -a $HOME/.hamonikr/themes/log/${0##*/}.log
+          sed -i 's/"value": "linuxmint-logo-ring-symbolic"/"value": "hamonikr"/g' /home/$USER/.cinnamon/configs/menu@cinnamon.org/0.json
+      fi
+      
+      # kill plank
+      if pidof plank | grep [0-9] > /dev/null
+      then
+          echo "kill plank program"
+          killall plank
+          rm -f /home/$USER/.config/autostart/plank.desktop
+      fi
+
+      # backup current desktop settings
+      if command -v dconf &> /dev/null
+      then
+          dconf dump / > /home/$USER/.hamonikr/themes/save/hamonikr-theme-backup-$1.dconf
+      fi
+        
+      # 테마 변경된 상태 저장
+      echo "$1" | tee $HOME/.hamonikr/themes/done/hamonikr-theme-start.done &> /dev/null
+
+    fi
+
+    # make default_dconf
+    touch /home/$USER/.hamonikr/default_dconf.done
+
+  ;;
+
+  # if upgrade or remove
+  restore )
+    THEME=`cat /home/$USER/.hamonikr/themes/done/hamonikr-theme-start.done`
+
+    if [ -f "/home/$USER/.hamonikr/themes/save/hamonikr-theme-backup-$THEME.dconf" ] ; then
+        echo "Restore previous environment..."
+        rm -f /home/$USER/.hamonikr/themes/save/hamonikr-theme-backup-$THEME.dconf
+    fi
+
+    if [ -f "/home/$USER/.hamonikr/themes/done/hamonikr-theme-start.done" ] ; then
+        echo "delete program setting files..."
+        rm -f /home/$USER/.hamonikr/themes/done/hamonikr-theme-start.done
+    fi
+
+    # default_dconf.done 삭제
+    if [ -f "/home/$USER/.hamonikr/default_dconf.done" ] ; then 
+        rm -f /home/$USER/.hamonikr/default_dconf.done
+    fi
+
+    if [ -f "/home/$USER/.hamonikr/themes/log/${0##*/}.log" ] ; then
+        echo "delete program log files..."    
+        rm -f /home/$USER/.hamonikr/themes/log/${0##*/}.log
+    fi
+  ;;
+
+  remove )
+    # default_dconf.done 삭제
+    if [ -f "/home/$USER/.hamonikr/default_dconf.done" ] ; then 
+        rm -f /home/$USER/.hamonikr/default_dconf.done
+    fi
+
+    if pidof plank | grep [0-9] > /dev/null
+      then
+        echo "kill plank program"
+        killall plank
+    fi
+
+    if [ -f "/home/${USER}/.config/autostart/plank.desktop" ] ; then
+        rm /home/${USER}/.config/autostart/plank.desktop
+    fi
+
+    if [ -d "/home/$USER/.hamonikr/themes" ]; then
+      rm -r /home/$USER/.hamonikr/themes
+    fi
+  ;;
+
+  # backup current desktop settings
+  save )
+    echo "desktop themes save"
+    if command -v dconf &> /dev/null
+    then
+        dconf dump / > /home/${USER}/.hamonikr/themes/save/hamonikr-theme-backup.dconf
+    fi
+  ;;
+
+  # load desktop settings
+  load )
+    echo "load desktop themes"
+    if command -v dconf &> /dev/null
+    then
+        # if : custom save & extra save
+        if [ "$2" == "" ]; then
+            echo "hamonikr-themes-backup.dconf"
+        else
+            echo $2
+        fi
+    fi
+  ;;
+
+esac
 

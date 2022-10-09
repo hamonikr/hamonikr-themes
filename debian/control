@@ -6,9 +6,10 @@ Build-Depends: debhelper (>= 9), sassc
 Standards-Version: 3.9.5
 
 Package: hamonikr-themes
-Replaces: libplank-common, mint-clearloox-theme, mint-x-theme, mint-y-theme, mint-z-theme, mint-themes-gtk3, cinnamon-themes, hamonikr-jin-themes
-Conflicts: mint-clearloox-theme, mint-x-theme, mint-y-theme, mint-z-theme, mint-themes-gtk3, cinnamon-themes
-Depends: ${misc:Depends}, plank, fonts-nanum, fonts-nanum-coding, fonts-nanum-extra, fonts-noto-cjk-extra, hamonikr-jin-icon-theme, hamonikr-artwork, hamonikr-backgrounds-jin
+Replaces: libplank-common, mint-clearloox-theme, mint-x-theme, mint-y-theme, mint-z-theme, mint-themes-gtk3, cinnamon-themes, hamonikr-jin-themes, hamonikr-artwork
+Conflicts: mint-clearloox-theme, mint-x-theme, mint-y-theme, mint-z-theme, mint-themes-gtk3, cinnamon-themes, hamonikr-jin-themes, hamonikr-artwork
+Depends: plank
+Recommends: fonts-nanum, fonts-nanum-coding, fonts-nanum-extra, fonts-noto-cjk-extra, hamonikr-icons, hamonikr-artwork, hamonikr-backgrounds
 Architecture: all
 Description: HamoniKR gtk and Cinnamon themes
  Mac like theme for HamoniKR 4.0.

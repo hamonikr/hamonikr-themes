@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Version=1.0
-Name=hamonikr-theme
-Comment=Apply hamonikr-theme
-Exec=hamonikr-theme-start
-Terminal=false
-Type=Application
-StartupNotify=false
