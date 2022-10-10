@@ -1,3 +1,13 @@
+hamonikr-themes (4.2.1) taebaek; urgency=medium
+
+  [Kevin Kim]
+  * Rewrite theme command to usr/local/bin/hamonikr-theme-setting
+   - refectoring, and changed logging
+   - Add 2 style (winstyle, macstyle)
+  * Update plank configuration
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 09 Oct 2022 16:05:10 +0900
+
 hamonikr-themes (4.2.0) taebaek; urgency=medium
 
   [Kevin Kim]

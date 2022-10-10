@@ -3,18 +3,11 @@
 case "$1" in
     remove|upgrade)
 
-      if [ -f /usr/share/cinnamon/applets/grouped-window-list@cinnamon.org/settings-override.json.bak ] ; then
-        mv -f /usr/share/cinnamon/applets/grouped-window-list@cinnamon.org/settings-override.json.bak \
-        /usr/share/cinnamon/applets/grouped-window-list@cinnamon.org/settings-override.json
-      fi
+      RUID=$(who | awk 'FNR == 1 {print $1}')
+      [ -d /home/${RUID}/.hamonikr/theme ] && rm -rf /home/${RUID}/.hamonikr/theme
+      [ ! -z $(pidof plank | grep '[0-9]') ] && killall plank
+      [ -f /home/${RUID}/.config/autostart/plank.desktop ] && rm /home/${RUID}/.config/autostart/plank.desktop
 
-      if [ -f /usr/share/cinnamon/applets/menu@cinnamon.org/settings-override.json.bak ] ; then
-        mv -f /usr/share/cinnamon/applets/menu@cinnamon.org/settings-override.json.bak \
-        /usr/share/cinnamon/applets/menu@cinnamon.org/settings-override.json
-      fi
-      
-      /usr/local/bin/hamonikr-theme-start remove || true
-      
       gtk-update-icon-cache || true
 
       if [ -f "/etc/hamonikr/info" ] ; then
@@ -23,12 +16,9 @@ case "$1" in
           fi    
       fi      
     ;;
-
     deconfigure|failed-upgrade)
       gtk-update-icon-cache || true
-      # fc-cache -v -f
     ;;
-
     *)
         echo "prerm called with unknown argument \`$1'" >&2
         exit 1

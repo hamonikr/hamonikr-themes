@@ -1,9 +1,15 @@
 #!/bin/bash
 
+RUID=$(who | awk 'FNR == 1 {print $1}')
+
 if [ -f "/etc/xdg/autostart/hamonikr-theme.desktop" ] ; then
     rm /etc/xdg/autostart/hamonikr-theme.desktop
 fi
 
 if [ -f "/etc/xdg/autostart/plank.desktop" ] ; then
     rm /etc/xdg/autostart/plank.desktop
+fi
+
+if [ -d /home/${RUID}/.hamonikr/theme ] ; then
+    rm -fr /home/${RUID}/.hamonikr/theme
 fi

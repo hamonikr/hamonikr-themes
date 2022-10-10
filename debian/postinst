@@ -14,8 +14,6 @@ case "$1" in
           cp /etc/skel/.config/autostart/plank.desktop /home/${RUID}/.config/autostart/
         fi
 
-        rm -f /home/${RUID}/.hamonikr/themes/done/hamonikr-theme-start.* || true
-        rm -f /home/${RUID}/.hamonikr/themes/save/hamonikr-theme-backup.dconf || true
       fi
 
       if [ -f "/etc/hamonikr/info" ] ; then
@@ -36,7 +34,8 @@ case "$1" in
             /usr/share/cinnamon/applets/menu@cinnamon.org/settings-override.json
           fi
 
-          cp -f /usr/share/hamonikr/gschema/hamonikr-system.gschema.override /usr/share/glib-2.0/schemas/hamonikr-system.gschema.override
+          cp -f /usr/share/hamonikr/gschema/hamonikr-system.gschema.override \
+          /usr/share/glib-2.0/schemas/hamonikr-system.gschema.override
           
           if which glib-compile-schemas >/dev/null 2>&1 ; then
               glib-compile-schemas /usr/share/glib-2.0/schemas

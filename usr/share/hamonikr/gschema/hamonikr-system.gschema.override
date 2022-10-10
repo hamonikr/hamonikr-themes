@@ -23,7 +23,7 @@ font-name="Noto Sans CJK KR 10"
 gtk-key-theme='Default'
 gtk-theme='HamoniKR'
 icon-theme='HamoniKR'
-monospace-font-name="Droid Sans Mono 10"
+monospace-font-name="Hack Nerd Font 10"
 toolkit-accessibility=false
 
 [org.gnome.desktop.background]
