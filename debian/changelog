@@ -1,3 +1,10 @@
+hamonikr-themes (4.2.3) taebaek; urgency=medium
+  [Kevin Kim]
+  * Update usr/share/hamonikr/gschema/hamonikr-system.gschema.override
+   - Changed org.cinnamon.desktop.interface gtk-theme to 'HamoniKR-light'
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 16 Oct 2022 02:24:25 +0900
+
 hamonikr-themes (4.2.2) taebaek; urgency=medium
   [Kevin Kim]
   * Update HamoniKR theme

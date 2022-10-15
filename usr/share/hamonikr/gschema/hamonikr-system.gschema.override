@@ -89,7 +89,7 @@ terminal=['<Primary><Alt>t']
 [org.cinnamon.desktop.interface]
 cursor-theme='HamoniKR'
 gtk-key-theme='Default'
-gtk-theme='HamoniKR'
+gtk-theme='HamoniKR-light'
 icon-theme='HamoniKR'
 menus-have-icons=true
 toolkit-accessibility=false
