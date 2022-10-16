@@ -284,3 +284,7 @@ mpv-options='hwdec=yes'
 [org.x.viewer.plugins.pythonconsole]
 use-system-font=false
 font='Hack Nerd Font 9'
+
+[net.launchpad.plank.dock.settings]
+zoom-enabled=true
+zoom-percent=150
