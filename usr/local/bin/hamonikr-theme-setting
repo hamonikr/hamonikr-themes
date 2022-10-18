@@ -87,12 +87,6 @@ case $1 in
       gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr/default_background.jpg"                
       gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr/default_background.jpg'
 
-      # menu logo change
-      if [ -f "$HOME/.cinnamon/configs/menu@cinnamon.org/0.json" ] ; then
-          sed -i 's/"value": "linuxmint-logo-ring-symbolic"/"value": "hamonikr"/g' $HOME/.cinnamon/configs/menu@cinnamon.org/0.json
-          log "Changed hamonikr default menu logo"
-      fi
-
       # Mac 스타일로 Dock 사용하는 경우에는 plank 설정
       if [ -z $(pidof plank | grep '[0-9]') ] ; then
         dconf load /net/launchpad/plank/docks/ < /etc/skel/.config/plank/dock1/launchers/plank-dconf
@@ -163,12 +157,7 @@ case $1 in
       gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr/default_background.jpg"                
       gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr/default_background.jpg'
 
-      # menu logo change
-      if [ -f "$HOME/.cinnamon/configs/menu@cinnamon.org/0.json" ] ; then
-          sed -i 's/"value": "linuxmint-logo-ring-symbolic"/"value": "hamonikr"/g' $HOME/.cinnamon/configs/menu@cinnamon.org/0.json
-          log "Changed hamonikr default menu logo"
-      fi
-      
+  
       # 윈도우 스타일로 Dock 사용을 안하는 경우에는 kill plank
       if [ ! -z $(pidof plank | grep '[0-9]') ] ; then
         killall plank && rm -f $HOME/.config/autostart/plank.desktop

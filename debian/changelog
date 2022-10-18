@@ -1,4 +1,13 @@
+hamonikr-themes (4.2.4) taebaek; urgency=medium
+
+  [Kevin Kim]
+  * moved main feature to hamonikr-system
+   - applet and gschemea
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 18 Oct 2022 13:51:23 +0900
+
 hamonikr-themes (4.2.3) taebaek; urgency=medium
+
   [Kevin Kim]
   * Update usr/share/hamonikr/gschema/hamonikr-system.gschema.override
    - Changed org.cinnamon.desktop.interface gtk-theme to 'HamoniKR-light'

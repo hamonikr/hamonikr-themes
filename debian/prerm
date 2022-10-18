@@ -9,12 +9,6 @@ case "$1" in
       [ -f /home/${RUID}/.config/autostart/plank.desktop ] && rm /home/${RUID}/.config/autostart/plank.desktop
 
       gtk-update-icon-cache || true
-
-      if [ -f "/etc/hamonikr/info" ] ; then
-          if which glib-compile-schemas >/dev/null 2>&1 ; then
-              glib-compile-schemas /usr/share/glib-2.0/schemas
-          fi    
-      fi      
     ;;
     deconfigure|failed-upgrade)
       gtk-update-icon-cache || true
