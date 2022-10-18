@@ -30,6 +30,15 @@
   <defs
      id="defs8">
     <linearGradient
+       inkscape:collect="always"
+       xlink:href="#unchecked_highlight"
+       id="linearGradient1667"
+       x1="18"
+       y1="38.362179"
+       x2="32"
+       y2="38.362179"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
        id="unchecked_highlight"
        osb:paint="solid">
       <stop
@@ -53,11 +62,11 @@
       <stop
          id="stop1615"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1" />
+         style="stop-color:#6a6a6a;stop-opacity:1" />
       <stop
          id="stop1617"
          offset="1"
-         style="stop-color:#f9f9f9;stop-opacity:1" />
+         style="stop-color:#545454;stop-opacity:1" />
     </linearGradient>
   </defs>
   <sodipodi:namedview
@@ -73,9 +82,9 @@
      inkscape:window-height="704"
      id="namedview6"
      showgrid="false"
-     inkscape:zoom="6.9532167"
-     inkscape:cx="-21.933286"
-     inkscape:cy="-1.6719714"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="12"
+     inkscape:cy="12"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -124,7 +133,7 @@
              ry="2.461539" />
           <rect
              ry="2.1538463"
-             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.07692313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient1667);fill-opacity:1;stroke:none;stroke-width:1.07692313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
              id="rect5147-9-1-5-7-6-3-70"
              width="14"
              height="13.999997"

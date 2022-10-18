@@ -1,3 +1,11 @@
+hamonikr-themes (4.2.5) taebaek; urgency=medium
+
+  [JamesBae]
+  * Create backup folder and save old theme files
+  * Change theme files
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 18 Oct 2022 14:20:50 +0900
+
 hamonikr-themes (4.2.4) taebaek; urgency=medium
 
   [Kevin Kim]

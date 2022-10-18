@@ -30,6 +30,15 @@
   <defs
      id="defs8">
     <linearGradient
+       inkscape:collect="always"
+       xlink:href="#unchecked_highlight"
+       id="linearGradient1661"
+       x1="51.610744"
+       y1="141.02211"
+       x2="80.99575"
+       y2="141.02211"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
        id="unchecked_highlight"
        osb:paint="solid">
       <stop
@@ -53,11 +62,11 @@
       <stop
          id="stop1615"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1" />
+         style="stop-color:#6a6a6a;stop-opacity:1" />
       <stop
          id="stop1617"
          offset="1"
-         style="stop-color:#f9f9f9;stop-opacity:1" />
+         style="stop-color:#545454;stop-opacity:1" />
     </linearGradient>
   </defs>
   <sodipodi:namedview
@@ -73,9 +82,9 @@
      inkscape:window-height="704"
      id="namedview6"
      showgrid="false"
-     inkscape:zoom="19.666667"
-     inkscape:cx="9.3903991"
-     inkscape:cy="11.391797"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="12"
+     inkscape:cy="12"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -118,7 +127,7 @@
                  ry="16.313646" />
               <rect
                  ry="14.27444"
-                 style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.24240041;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+                 style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient1661);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.24240041;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
                  id="rect5147-9-1-7-7-61"
                  width="29.385006"
                  height="28.919117"
