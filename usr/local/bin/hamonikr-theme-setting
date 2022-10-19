@@ -72,7 +72,7 @@ case $1 in
       gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR'
       gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR'
       gsettings set org.cinnamon.theme name 'HamoniKR'
-      gsettings set org.cinnamon.desktop.interface cursor-theme 'HamoniKR-Cursor'
+      gsettings set org.cinnamon.desktop.interface cursor-theme 'HamoniKR'
 
       # 폰트 설정
       gsettings set org.cinnamon.desktop.interface font-name '나눔스퀘어라운드 10'
@@ -142,7 +142,7 @@ case $1 in
       gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR'
       gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR'
       gsettings set org.cinnamon.theme name 'HamoniKR'
-      gsettings set org.cinnamon.desktop.interface cursor-theme 'HamoniKR-Cursor'
+      gsettings set org.cinnamon.desktop.interface cursor-theme 'HamoniKR'
 
       # 폰트 설정
       gsettings set org.cinnamon.desktop.interface font-name '나눔스퀘어라운드 10'
