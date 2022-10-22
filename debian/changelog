@@ -1,3 +1,14 @@
+hamonikr-themes (4.2.7) taebaek; urgency=medium
+
+  [Kevin]
+  * Changed applets in panel
+  * Update hamonikr-theme-setting
+   - Changed default font settings
+   - Changed default icon theme as Stylish
+  * Adjust plank dock items
+
+ -- HamoniKR <pkg@hamonikr.org>  Sat, 22 Oct 2022 18:19:48 +0900
+
 hamonikr-themes (4.2.6) taebaek; urgency=medium
 
   [JamesBae]

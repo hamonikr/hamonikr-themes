@@ -17,6 +17,7 @@ case "$1" in
       fi
 
       gtk-update-icon-cache || true
+      fc-cache -f
 
     ;;
     abort-upgrade|abort-remove|abort-deconfigure)
