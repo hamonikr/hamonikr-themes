@@ -1,3 +1,11 @@
+hamonikr-themes (4.2.8) taebaek; urgency=medium
+
+  [Kevin]
+  * Add show desktop applets in panel
+  * Update hamonikr-theme-setting
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 23 Oct 2022 01:47:49 +0900
+
 hamonikr-themes (4.2.7) taebaek; urgency=medium
 
   [Kevin]

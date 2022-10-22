@@ -44,7 +44,8 @@ update_dconf() {
   'panel1:right:6:notifications@cinnamon.org:8', 
   'panel1:right:7:network@cinnamon.org:9', 
   'panel1:right:8:power@cinnamon.org:10', 
-  'panel1:right:9:user@cinnamon.org:11']"
+  'panel1:right:9:user@cinnamon.org:11', 
+  'panel1:right:10:show-desktop@cinnamon.org:12']"
   
   # 테마 설정
   gsettings set org.cinnamon.desktop.interface icon-theme 'Stylish'
@@ -88,7 +89,7 @@ update_dconf() {
 mkdir -p $HOME/.hamonikr/theme
 
 case $1 in
-  default|macstyle)
+  default|macstyle|mac)
     [ -f $HOME/.hamonikr/theme/${0##*/}.done ] && isrun="run";
 
     if [ x$isrun != "xrun" ] ; then
@@ -117,7 +118,7 @@ case $1 in
 
     fi
   ;;
-  winstyle)
+  winstyle|win)
     [ -f $HOME/.hamonikr/theme/${0##*/}.done ] && isrun="run";
 
     if [ x$isrun != "xrun" ] ; then
@@ -144,7 +145,7 @@ case $1 in
 
     fi
   ;;
-  restore)
+  restore|init|reset)
     if [ -f $HOME/.hamonikr/theme/${0##*/}.save ] && \
        [ -f $HOME/.hamonikr/theme/${0##*/}.done ] ; then
 
