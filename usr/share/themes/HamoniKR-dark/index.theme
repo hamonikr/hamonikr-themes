@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=HamoniKR-dark
-Comment=An Stylish Gtk+ theme based on Elegant Design
+Name=HamoniKR-Dark
+Comment=Dark theme for HamoniKR OS
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=HamoniKR-dark
 MetacityTheme=HamoniKR-dark
-IconTheme=HamoniKR
-CursorTheme=HamoniKR-Cursor
-ButtonLayout=close,minimize,maximize:menu
+IconTheme=Stylish
+CursorTheme=HamoniKR
+ButtonLayout=menu:minimize,maximize,close
