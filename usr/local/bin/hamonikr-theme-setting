@@ -97,10 +97,10 @@ case $1 in
       dconf dump / > $HOME/.hamonikr/theme/${0##*/}.save
       log "Backup current theme"
 
-      if [ -f $HOME/.config/autostart/hamonikr-theme.desktop ] ; then
-        SELECT=`cat $HOME/.config/autostart/hamonikr-theme.desktop | grep Exec`
-        sed -i "s/$SELECT/Exec=${0##*/} default/g" $HOME/.config/autostart/hamonikr-theme.desktop
-      fi
+      # if [ -f $HOME/.config/autostart/hamonikr-theme.desktop ] ; then
+      #   SELECT=`cat $HOME/.config/autostart/hamonikr-theme.desktop | grep Exec`
+      #   sed -i "s/$SELECT/Exec=${0##*/} default/g" $HOME/.config/autostart/hamonikr-theme.desktop
+      # fi
 
       update_dconf
       gsettings set org.cinnamon panels-enabled "['1:0:top']"
@@ -126,10 +126,10 @@ case $1 in
       dconf dump / > $HOME/.hamonikr/theme/${0##*/}.save
       log "Backup current theme"
 
-      if [ -f $HOME/.config/autostart/hamonikr-theme.desktop ] ; then
-        SELECT=`cat $HOME/.config/autostart/hamonikr-theme.desktop | grep Exec`
-        sed -i "s/$SELECT/Exec=${0##*/} default/g" $HOME/.config/autostart/hamonikr-theme.desktop
-      fi
+      # if [ -f $HOME/.config/autostart/hamonikr-theme.desktop ] ; then
+      #   SELECT=`cat $HOME/.config/autostart/hamonikr-theme.desktop | grep Exec`
+      #   sed -i "s/$SELECT/Exec=${0##*/} default/g" $HOME/.config/autostart/hamonikr-theme.desktop
+      # fi
 
       update_dconf
       gsettings set org.cinnamon panels-enabled "['1:0:bottom']"
