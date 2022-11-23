@@ -7,10 +7,12 @@ case "$1" in
 
       if [ "$RUID" != "" ] ; then
         if [ ! -f /home/${RUID}/.config/autostart/hamonikr-theme.desktop ] ; then
+          [ ! -d "/home/${RUID}/.config/autostart/" ] && mkdir -p /home/${RUID}/.config/autostart/
           cp /etc/skel/.config/autostart/hamonikr-theme.desktop /home/${RUID}/.config/autostart/
         fi
 
         if [ ! -f /home/${RUID}/.config/autostart/plank.desktop ] ; then
+          [ ! -d "/home/${RUID}/.config/autostart/" ] && mkdir -p /home/${RUID}/.config/autostart/
           cp /etc/skel/.config/autostart/plank.desktop /home/${RUID}/.config/autostart/
         fi
 

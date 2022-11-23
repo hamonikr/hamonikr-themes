@@ -10,6 +10,12 @@ if [ -f "/etc/xdg/autostart/plank.desktop" ] ; then
     rm /etc/xdg/autostart/plank.desktop
 fi
 
-if [ -d /home/${RUID}/.hamonikr/theme ] ; then
-    rm -fr /home/${RUID}/.hamonikr/theme
+if [ "$RUID" != "" ] ; then
+    if [ ! -d "/home/${RUID}/.hamonikr" ]; then
+        mkdir -p /home/${RUID}/.hamonikr
+    fi
+
+    if [ -d /home/${RUID}/.hamonikr/theme ] ; then
+        rm -fr /home/${RUID}/.hamonikr/theme
+    fi
 fi

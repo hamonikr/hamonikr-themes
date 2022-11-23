@@ -1,3 +1,11 @@
+hamonikr-themes (4.3.2) taebaek; urgency=medium
+
+  [Kevin Kim]
+  * Add create folder if not found
+   - .config/autostart, .hamonikr folders
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 23 Nov 2022 22:16:40 +0900
+
 hamonikr-themes (4.3.1) taebaek; urgency=medium
 
   [JamesBae]
