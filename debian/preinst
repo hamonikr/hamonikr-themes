@@ -13,6 +13,7 @@ fi
 if [ "$RUID" != "" ] ; then
     if [ ! -d "/home/${RUID}/.hamonikr" ]; then
         mkdir -p /home/${RUID}/.hamonikr
+        chown ${RUID}:${RUID} /home/${RUID}/.hamonikr -R
     fi
 
     if [ -d /home/${RUID}/.hamonikr/theme ] ; then
