@@ -1,3 +1,12 @@
+hamonikr-themes (4.3.4) taebaek; urgency=medium
+
+  [JamesBae]
+  * Change the theme to the way it is copied during installation because of the flexibility of the theme change
+    - Move from /etc/skel/.config/autostart to /usr/share/hamonikr-themes/etc/skel.config/autostart
+    - Change postinst copy case 
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 26 Dec 2022 14:23:33 +0900
+
 hamonikr-themes (4.3.3) taebaek; urgency=medium
 
   [Kevin Kim]

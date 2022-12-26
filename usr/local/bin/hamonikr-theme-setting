@@ -104,15 +104,21 @@ case $1 in
       #   sed -i "s/$SELECT/Exec=${0##*/} default/g" $HOME/.config/autostart/hamonikr-theme.desktop
       # fi
 
+      rm /etc/skel/.config/autostart/hamonikr-theme.desktop
+      rm /etc/skel/.config/autostart/plank.desktop
+
       update_dconf
       gsettings set org.cinnamon panels-enabled "['1:0:top']"
 
       # Mac 스타일로 Dock 사용하는 경우에는 plank 설정
       if [ -z $(pidof plank | grep '[0-9]') ] ; then
         dconf load /net/launchpad/plank/docks/ < /etc/skel/.config/plank/dock1/launchers/plank-dconf
-        cp /etc/skel/.config/autostart/plank.desktop $HOME/.config/autostart/plank.desktop
+        cp /usr/share/hamonikr-themes/etc/skel/.config/autostart/plank.desktop $HOME/.config/autostart/plank.desktop
         plank &
-      fi      
+      fi
+
+      cp /usr/share/hamonikr-themes/etc/skel/.config/autostart/hamonikr-theme.desktop /etc/skel/.config/autostart/hamonikr-theme.desktop
+      cp /usr/share/hamonikr-themes/etc/skel/.config/autostart/plank.desktop /etc/skel/.config/autostart/plank.desktop
 
       # write parameter = default
       echo "$1" | tee $HOME/.hamonikr/theme/${0##*/}.done &> /dev/null
@@ -133,6 +139,10 @@ case $1 in
       #   sed -i "s/$SELECT/Exec=${0##*/} default/g" $HOME/.config/autostart/hamonikr-theme.desktop
       # fi
 
+      rm /etc/skel/.config/autostart/hamonikr-theme.desktop
+      rm /etc/skel/.config/autostart/hamonikr-theme-debian.desktop
+      rm /etc/skel/.config/autostart/plank.desktop
+
       update_dconf
       gsettings set org.cinnamon panels-enabled "['1:0:bottom']"
   
@@ -140,6 +150,8 @@ case $1 in
       if [ ! -z $(pidof plank | grep '[0-9]') ] ; then
         killall plank && rm -f $HOME/.config/autostart/plank.desktop
       fi
+
+      cp /usr/share/hamonikr-themes/etc/skel/.config/autostart/hamonikr-theme-debian.desktop /etc/skel/.config/autostart/hamonikr-theme.desktop
 
       # write parameter = default
       echo "$1" | tee $HOME/.hamonikr/theme/${0##*/}.done &> /dev/null
