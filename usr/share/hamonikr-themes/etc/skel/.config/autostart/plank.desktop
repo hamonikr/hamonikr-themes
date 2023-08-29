@@ -12,4 +12,4 @@ X-GNOME-Autostart-enabled=true
 Hidden=false
 Name[ko_KR]=Plank
 Comment[ko_KR]=간단한 Dock
-X-GNOME-Autostart-Delay=2
+X-GNOME-Autostart-Delay=5

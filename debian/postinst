@@ -5,42 +5,18 @@ case "$1" in
 
       RUID=$(who | awk 'FNR == 1 {print $1}')
 
-      [ ! -d "/etc/skel/.config/autostart" ] && mkdir -p /etc/skel/.config/autostart
-
-      source /etc/os-release
-
-      if [ "X$ID_LIKE" = "Xubuntu" ]; then
-
-        cp /usr/share/hamonikr-themes/etc/skel/.config/autostart/hamonikr-theme.desktop /etc/skel/.config/autostart/hamonikr-theme.desktop
-        cp /usr/share/hamonikr-themes/etc/skel/.config/autostart/plank.desktop /etc/skel/.config/autostart/plank.desktop
-
         if [ "$RUID" != "" ] ; then
           if [ ! -f /home/${RUID}/.config/autostart/hamonikr-theme.desktop ] ; then
             [ ! -d "/home/${RUID}/.config/autostart/" ] && mkdir -p /home/${RUID}/.config/autostart/
-            cp /usr/share/hamonikr-themes/etc/skel/.config/autostart/hamonikr-theme.desktop /home/${RUID}/.config/autostart/
+          cp /etc/skel/.config/autostart/hamonikr-theme.desktop /home/${RUID}/.config/autostart/
             chown ${RUID}:${RUID} /home/${RUID}/.config/autostart -R
           fi
 
           if [ ! -f /home/${RUID}/.config/autostart/plank.desktop ] ; then
             [ ! -d "/home/${RUID}/.config/autostart/" ] && mkdir -p /home/${RUID}/.config/autostart/
-            cp /usr/share/hamonikr-themes/etc/skel/.config/autostart/plank.desktop /home/${RUID}/.config/autostart/
+          cp /etc/skel/.config/autostart/plank.desktop /home/${RUID}/.config/autostart/
             chown ${RUID}:${RUID} /home/${RUID}/.config/autostart -R
           fi
-        fi
-
-
-        
-      elif [ "X$ID_LIKE" = "Xdebian" ]; then
-
-        cp /usr/share/hamonikr-themes/etc/skel/.config/autostart/hamonikr-theme-debian.desktop /etc/skel/.config/autostart/hamonikr-theme.desktop
-
-        if [ "$RUID" != "" ] ; then
-          if [ ! -f /home/${RUID}/.config/autostart/hamonikr-theme-debian.desktop ] ; then
-            [ ! -d "/home/${RUID}/.config/autostart/" ] && mkdir -p /home/${RUID}/.config/autostart/
-            cp /usr/share/hamonikr-themes/etc/skel/.config/autostart/hamonikr-theme-debian.desktop /home/${RUID}/.config/autostart/
-            chown ${RUID}:${RUID} /home/${RUID}/.config/autostart -R
-          fi
-        fi
 
       fi
 

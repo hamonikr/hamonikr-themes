@@ -1,3 +1,15 @@
+hamonikr-themes (4.4.0) stable; urgency=medium
+
+  [Kevin Kim]
+  * Fixed slow startup with NVIDIA driver
+   - changed delay time 5 sec
+   - https://forums.linuxmint.com/viewtopic.php?t=364553
+
+  * Removed wrong permission parts
+   - /etc/skel/.config/autostart DIR can not access by User
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 29 Aug 2023 12:25:37 +0900
+ 
 hamonikr-themes (4.3.4) taebaek; urgency=medium
 
   [JamesBae]
