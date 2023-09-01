@@ -1,3 +1,18 @@
+hamonikr-themes (4.4.2) stable; urgency=medium
+
+  [Kevin Kim]
+  * Add shutdown desktop file and icon
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 01 Sep 2023 14:02:24 +0900
+
+hamonikr-themes (4.4.1) stable; urgency=medium
+
+  [Kevin Kim]
+  * Add missing dockitem files with plank
+   - update in postinst
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 01 Sep 2023 13:17:55 +0900
+
 hamonikr-themes (4.4.0) stable; urgency=medium
 
   [Kevin Kim]
