@@ -50,7 +50,7 @@ update_dconf() {
   'panel1:right:10:show-desktop@cinnamon.org:12']"
   
   # 테마 설정
-  gsettings set org.cinnamon.desktop.interface icon-theme 'Stylish'
+  gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
   gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR'
   gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR'
   gsettings set org.cinnamon.theme name 'HamoniKR'
@@ -112,7 +112,7 @@ case $1 in
         dconf load /net/launchpad/plank/docks/ < /etc/skel/.config/plank/dock1/launchers/plank-dconf
         cp /etc/skel/.config/autostart/plank.desktop $HOME/.config/autostart/plank.desktop
         plank &
-      fi
+      fi      
 
       # write parameter = default
       echo "$1" | tee $HOME/.hamonikr/theme/${0##*/}.done &> /dev/null

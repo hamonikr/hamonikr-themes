@@ -5,21 +5,20 @@ case "$1" in
 
       RUID=$(who | awk 'FNR == 1 {print $1}')
 
-        if [ "$RUID" != "" ] ; then
-          if [ ! -f /home/${RUID}/.config/autostart/hamonikr-theme.desktop ] ; then
-            [ ! -d "/home/${RUID}/.config/autostart/" ] && mkdir -p /home/${RUID}/.config/autostart/
+      if [ "$RUID" != "" ] ; then
+        if [ ! -f /home/${RUID}/.config/autostart/hamonikr-theme.desktop ] ; then
+          [ ! -d "/home/${RUID}/.config/autostart/" ] && mkdir -p /home/${RUID}/.config/autostart/
           cp /etc/skel/.config/autostart/hamonikr-theme.desktop /home/${RUID}/.config/autostart/
-            chown ${RUID}:${RUID} /home/${RUID}/.config/autostart -R
-          fi
+          chown ${RUID}:${RUID} /home/${RUID}/.config/autostart -R
+        fi
 
-          if [ ! -f /home/${RUID}/.config/autostart/plank.desktop ] ; then
-            [ ! -d "/home/${RUID}/.config/autostart/" ] && mkdir -p /home/${RUID}/.config/autostart/
+        if [ ! -f /home/${RUID}/.config/autostart/plank.desktop ] ; then
+          [ ! -d "/home/${RUID}/.config/autostart/" ] && mkdir -p /home/${RUID}/.config/autostart/
           cp /etc/skel/.config/autostart/plank.desktop /home/${RUID}/.config/autostart/
-            chown ${RUID}:${RUID} /home/${RUID}/.config/autostart -R
-          fi
-
+          chown ${RUID}:${RUID} /home/${RUID}/.config/autostart -R
+        fi
       fi
-
+      
       gtk-update-icon-cache || true
       fc-cache -f
 

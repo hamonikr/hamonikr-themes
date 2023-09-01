@@ -7,3 +7,6 @@ override_dh_builddeb:
 	dh_builddeb -- -Zxz -z9
 
 override_dh_usrlocal:
+
+# 타임스탬프, 파일 시스템 순서와 같은 비결정적 정보를 제거하는 단계
+override_dh_strip_nondeterminism:

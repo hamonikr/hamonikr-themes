@@ -9,6 +9,29 @@ hamonikr-themes (4.4.0) stable; urgency=medium
    - /etc/skel/.config/autostart DIR can not access by User
 
  -- HamoniKR <pkg@hamonikr.org>  Tue, 29 Aug 2023 12:25:37 +0900
+
+hamonikr-themes (4.3.6) stable; urgency=medium
+
+  [Kevin Kim]
+  * Change icon theme default to HamoniKR
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 30 Aug 2023 14:13:20 +0900
+
+hamonikr-themes (4.3.5) stable; urgency=medium
+
+  [Kevin Kim]
+  * Merge from previous artwork for Ubuntu 22.04
+   - Add calender setting
+   - override menu@cinnamon.org
+   - Add smart panel extension
+   - Add search provider
+   - Add Stylish icon theme
+  * override_dh_strip_nondeterminism in rules
+   - It is too slow process
+  * Add smart-panel translation for Korean
+   - smart-panel@mohammad-sn.mo
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 30 Aug 2023 10:38:02 +0900
  
 hamonikr-themes (4.3.4) taebaek; urgency=medium
 
