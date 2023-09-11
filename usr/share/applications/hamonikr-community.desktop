@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Version=1.0
+Name=HamoniKR Community
+Name[ko]=하모니카 커뮤니티
+Comment=Visit to HamoniKR Community
+Comment[ko]=하모니카 커뮤니티 바로가기
+Icon=hamonikr-community
+Exec=sh -c 'xdg-open https://hamonikr.org/'
+Terminal=false
+Categories=Network;WebBrowser;
