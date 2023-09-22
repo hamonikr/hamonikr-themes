@@ -1,3 +1,19 @@
+hamonikr-themes (4.5.2) stable; urgency=medium
+
+  [Kevin Kim]
+  * Add lightdm setting
+   - Add  /etc/lightdm/lightdm.conf.d/99-hamonikr-greeter.conf 
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 22 Sep 2023 14:09:05 +0900
+
+hamonikr-themes (4.5.1) stable; urgency=medium
+
+  [Kevin Kim]
+  * Add gnome-terminal profile
+   - Add user's DCONF setting in postinst
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 22 Sep 2023 11:14:46 +0900
+
 hamonikr-themes (4.5.0) stable; urgency=medium
 
   [Kevin Kim]

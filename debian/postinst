@@ -3,7 +3,10 @@
 case "$1" in
     configure)
 
+      # Get Real User ID
       RUID=$(who | awk 'FNR == 1 {print $1}')
+      # Get Real User UID
+      RUSER_UID=$(id -u ${RUID})
 
       if [ "$RUID" != "" ] ; then
         if [ ! -f /home/${RUID}/.config/autostart/hamonikr-theme.desktop ] ; then
@@ -22,7 +25,11 @@ case "$1" in
           chown ${RUID}:${RUID} /home/${RUID}/.config/plank -R          
         fi
       fi
-      
+
+      if [ ! -z "$RUID" ] ; then
+          sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" dconf load /org/gnome/terminal/legacy/profiles:/:$(gsettings list-recursively org.gnome.Terminal.ProfilesList | grep default | cut -d' ' -f3 | tr -d "'")/ < /usr/share/hamonikr-themes/gnome-terminal.dconf
+      fi
+
       gtk-update-icon-cache || true
       fc-cache -f
 
