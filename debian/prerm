@@ -10,7 +10,7 @@ case "$1" in
 
       gtk-update-icon-cache || true
 
-      update-rc.d -f hamonikr-system remove
+      update-rc.d -f hamonikr-themes remove
       if which systemctl >/dev/null 2>&1
       then
           systemctl daemon-reload

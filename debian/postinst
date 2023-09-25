@@ -34,7 +34,7 @@ case "$1" in
       fc-cache -f
 
       if which systemctl >/dev/null 2>&1 ; then
-          systemctl enable hamonikr-system.service
+          systemctl enable hamonikr-themes.service
           systemctl daemon-reload
       fi      
 
