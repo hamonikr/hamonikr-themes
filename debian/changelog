@@ -1,3 +1,11 @@
+hamonikr-themes (4.5.5) stable; urgency=medium
+
+  [Kevin Kim]
+  * Fixed naver whale gpg error
+  * https://forum.whale.naver.com/topic/46349/
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 25 Sep 2023 11:55:33 +0900
+
 hamonikr-themes (4.5.4) stable; urgency=medium
 
   [Kevin Kim]
