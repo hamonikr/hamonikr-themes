@@ -9,6 +9,12 @@ case "$1" in
       [ -f /home/${RUID}/.config/autostart/plank.desktop ] && rm /home/${RUID}/.config/autostart/plank.desktop
 
       gtk-update-icon-cache || true
+
+      update-rc.d -f hamonikr-system remove
+      if which systemctl >/dev/null 2>&1
+      then
+          systemctl daemon-reload
+      fi
     ;;
     deconfigure|failed-upgrade)
       gtk-update-icon-cache || true

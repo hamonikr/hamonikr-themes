@@ -33,6 +33,11 @@ case "$1" in
       gtk-update-icon-cache || true
       fc-cache -f
 
+      if which systemctl >/dev/null 2>&1 ; then
+          systemctl enable hamonikr-system.service
+          systemctl daemon-reload
+      fi      
+
     ;;
     abort-upgrade|abort-remove|abort-deconfigure)
 
