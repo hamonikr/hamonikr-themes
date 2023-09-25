@@ -1,0 +1,13 @@
+[Unit]
+Description=HamoniKR Theme Counter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=no
+KillMode=process
+ExecStart=/usr/local/bin/theme-counter.sh
+
+[Install]
+WantedBy=multi-user.target

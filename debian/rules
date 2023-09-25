@@ -7,6 +7,18 @@ override_dh_builddeb:
 	dh_builddeb -- -Zxz -z9
 
 override_dh_usrlocal:
+	# remove this override when there aren't
+	# anymore files in /usr/local
+
+override_dh_installsystemd:
+	dh_installsystemd -phamonikr-themes hamonikr-themes.service
 
 # 타임스탬프, 파일 시스템 순서와 같은 비결정적 정보를 제거하는 단계
 override_dh_strip_nondeterminism:
+
+override_dh_link:
+	dh_link -X os-release
+
+override_dh_installdeb:
+	dh_installdeb
+	rm debian/*/DEBIAN/conffiles
