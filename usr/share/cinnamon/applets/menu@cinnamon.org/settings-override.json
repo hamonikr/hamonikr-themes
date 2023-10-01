@@ -12,6 +12,8 @@
             "name" : "HamoniKR",
             "icons" : [
                     "hamonikr-logo",
+                    "hamonikr",
+                    "hamonikr-menu",
                     "hamonikr-logo2",
                     "cinnamon-symbolic",
                     "emblem-favorite-symbolic",

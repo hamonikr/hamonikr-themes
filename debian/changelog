@@ -1,3 +1,28 @@
+hamonikr-themes (4.6.1) stable; urgency=medium
+
+  [Kevin Kim]
+  * Add menu applet default setting : menu.json
+   - It will copy into ~/.config/spice/menu@cinnamon.com/0.json
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 01 Oct 2023 21:10:19 +0900
+
+hamonikr-themes (4.6.0) stable; urgency=medium
+
+  [Kevin Kim]
+  * Removed previous applet setting
+   - For change menu@cinnamon.org applet
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 01 Oct 2023 17:19:35 +0900
+
+hamonikr-themes (4.5.9) stable; urgency=medium
+
+  [Kevin Kim]
+  * Fixed menu icon disappear in menu
+  
+   - updated menu@cinnamon.org applet's setting
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 01 Oct 2023 17:08:02 +0900
+
 hamonikr-themes (4.5.8) stable; urgency=medium
 
   [Kevin Kim]

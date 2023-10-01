@@ -30,7 +30,6 @@ update_dconf() {
 
   # 패널
   gsettings set org.cinnamon favorite-apps "['mintinstall.desktop', 'cinnamon-settings.desktop', 'nemo.desktop', 'hamonikr-community.desktop', 'hamonikr-help.desktop']"
-  gsettings set org.cinnamon app-menu-icon-name "hamonikr-menu"
   gsettings set org.cinnamon enabled-extensions "['smart-panel@mohammad-sn']"
   gsettings set org.cinnamon panels-height "['1:33']"
   gsettings set org.cinnamon panel-zone-icon-sizes '[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
@@ -49,6 +48,10 @@ update_dconf() {
   'panel1:right:9:user@cinnamon.org:11', 
   'panel1:right:10:show-desktop@cinnamon.org:12']"
   
+  # 시작메뉴, 시스템 정보 기본 아이콘
+  gsettings set org.cinnamon app-menu-icon-name "hamonikr"
+  gsettings set org.cinnamon system-icon "hamonikr"
+
   # 테마 설정
   gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
   gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR'

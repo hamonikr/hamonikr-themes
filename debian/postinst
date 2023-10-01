@@ -30,6 +30,12 @@ case "$1" in
           sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" dconf load /org/gnome/terminal/legacy/profiles:/:$(gsettings list-recursively org.gnome.Terminal.ProfilesList | grep default | cut -d' ' -f3 | tr -d "'")/ < /usr/share/hamonikr-themes/gnome-terminal.dconf
       fi
 
+      # For menu icon change
+      if [ -d "/home/${RUID}/.config/cinnamon/spices/menu@cinnamon.org/" ] ; then
+        rm -rf "/home/${RUID}/.config/cinnamon/spices/menu@cinnamon.org/*.json"
+        cp /usr/share/cinnamon/applets/menu@cinnamon.org/menu.json /home/${RUID}/.config/cinnamon/spices/menu@cinnamon.org/0.json
+      fi
+
       gtk-update-icon-cache || true
       fc-cache -f
 
