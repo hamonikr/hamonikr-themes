@@ -1,3 +1,10 @@
+hamonikr-themes (4.6.2) kumkang; urgency=medium
+
+  [Kevin Kim]
+  * Apply Stylish Icon theme as default
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 01 Oct 2023 22:16:01 +0900
+
 hamonikr-themes (4.6.1) stable; urgency=medium
 
   [Kevin Kim]
