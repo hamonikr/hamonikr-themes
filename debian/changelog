@@ -1,3 +1,11 @@
+hamonikr-themes (4.6.4) kumkang; urgency=medium
+
+  [Kevin Kim]
+  * Fixed dconf load command error 
+   - dock/dock1 to dock/dock1/ 
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 08 Oct 2023 03:33:45 +0900
+
 hamonikr-themes (4.6.3) kumkang; urgency=medium
 
   [Kevin Kim]

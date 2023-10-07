@@ -117,7 +117,7 @@ case $1 in
 
       # Mac 스타일로 Dock 사용하는 경우에는 plank 설정
       if [ -z $(pidof plank | grep '[0-9]') ] ; then
-        dconf load /net/launchpad/plank/docks/dock1 < /etc/skel/.config/plank/dock1/launchers/plank-dconf
+        dconf load /net/launchpad/plank/docks/dock1/ < /etc/skel/.config/plank/dock1/launchers/plank-dconf
         cp /etc/skel/.config/autostart/plank.desktop $HOME/.config/autostart/plank.desktop
         plank &
       fi      
