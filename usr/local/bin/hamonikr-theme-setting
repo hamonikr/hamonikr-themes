@@ -29,7 +29,7 @@ log() {
 update_dconf() {
 
   # 패널
-  gsettings set org.cinnamon favorite-apps "['mintinstall.desktop', 'cinnamon-settings.desktop', 'nemo.desktop', 'hamonikr-community.desktop', 'hamonikr-help.desktop']"
+  gsettings set org.cinnamon favorite-apps "['hamonikr-community.desktop', 'mintinstall.desktop', 'cinnamon-settings.desktop', 'nemo.desktop', 'hamonikr-help.desktop']"
   gsettings set org.cinnamon enabled-extensions "['smart-panel@mohammad-sn']"
   gsettings set org.cinnamon panels-height "['1:33']"
   gsettings set org.cinnamon panel-zone-icon-sizes '[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
@@ -51,6 +51,7 @@ update_dconf() {
   # 시작메뉴, 시스템 정보 기본 아이콘
   gsettings set org.cinnamon app-menu-icon-name "hamonikr"
   gsettings set org.cinnamon system-icon "hamonikr"
+  gsettings set org.cinnamon.settings-daemon.plugins.xsettings menus-have-icons true
 
   # 테마 설정
   if [ -d /usr/share/icons/Stylish ]; then
@@ -116,7 +117,7 @@ case $1 in
 
       # Mac 스타일로 Dock 사용하는 경우에는 plank 설정
       if [ -z $(pidof plank | grep '[0-9]') ] ; then
-        dconf load /net/launchpad/plank/docks/ < /etc/skel/.config/plank/dock1/launchers/plank-dconf
+        dconf load /net/launchpad/plank/docks/dock1 < /etc/skel/.config/plank/dock1/launchers/plank-dconf
         cp /etc/skel/.config/autostart/plank.desktop $HOME/.config/autostart/plank.desktop
         plank &
       fi      

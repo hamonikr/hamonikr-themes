@@ -1,9 +1,52 @@
+[net/launchpad/plank/docks]
+alignment='center'
+auto-pinning=true
+current-workspace-only=false
+dock-items=['whale.dockitem', 'nemo.dockitem', 'celluloid.dockitem', 'lollypop.dockitem', 'trash.dockitem', 'system-shutdown.dockitem']
+hide-delay=0
+hide-mode='intelligent'
+icon-size=48
+items-alignment='center'
+lock-items=false
+monitor=''
+offset=0
+pinned-only=false
+position='bottom'
+pressure-reveal=false
+show-dock-item=false
+theme='Default'
+tooltips-enabled=true
+unhide-delay=0
+zoom-enabled=true
+zoom-percent=150
+
+[net/launchpad/plank/docks/dock1]
+alignment='center'
+auto-pinning=true
+current-workspace-only=false
+dock-items=['whale.dockitem', 'nemo.dockitem', 'celluloid.dockitem', 'lollypop.dockitem', 'trash.dockitem', 'system-shutdown.dockitem']
+hide-delay=0
+hide-mode='intelligent'
+icon-size=48
+items-alignment='center'
+lock-items=false
+monitor=''
+offset=0
+pinned-only=false
+position='bottom'
+pressure-reveal=false
+show-dock-item=false
+theme='Default'
+tooltips-enabled=true
+unhide-delay=0
+zoom-enabled=true
+zoom-percent=150
+
 [org/cinnamon/desktop/background]
 picture-uri='file:////usr/share/backgrounds/hamonikr/default_background.jpg'
 
 [org/cinnamon]
 app-menu-icon-name='hamonikr'
-#app-menu-label='Menu'
 system-icon='hamonikr'
 enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:grouped-window-list@cinnamon.org:1', 'panel1:right:0:systray@cinnamon.org:2', 'panel1:right:1:printers@cinnamon.org:3', 'panel1:right:2:removable-drives@cinnamon.org:4', 'panel1:right:3:bluetooth@cinnamon.org:5', 'panel1:right:4:sound@cinnamon.org:6', 'panel1:right:5:calendar@cinnamon.org:7', 'panel1:right:6:notifications@cinnamon.org:8', 'panel1:right:7:network@cinnamon.org:9', 'panel1:right:8:power@cinnamon.org:10', 'panel1:right:9:user@cinnamon.org:11', 'panel1:right:10:show-desktop@cinnamon.org:12']
 enabled-extensions=['smart-panel@mohammad-sn']
@@ -24,7 +67,7 @@ cursor-blink-time=1200
 cursor-theme='HamoniKR'
 font-name='Pretendard 10'
 gtk-theme='HamoniKR'
-icon-theme='HamoniKR'
+icon-theme='Stylish'
 scaling-factor=uint32 0
 
 [org/gnome/desktop/interface]
@@ -36,6 +79,8 @@ toolkit-accessibility=false
 theme='HamoniKR'
 titlebar-font='Pretendard Medium 11'
 
+[org/cinnamon/settings-daemon/plugins/xsettings]
+menus-have-icons=true
 
 [org/cinnamon/desktop/keybindings/media-keys]
 www=['XF86WWW', '<Super>w']
