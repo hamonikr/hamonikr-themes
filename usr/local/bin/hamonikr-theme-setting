@@ -28,6 +28,15 @@ log() {
 
 update_dconf() {
 
+  # Copy screen recoding applet to user space
+  if [ ! -d "/home/${USER}/.local/share/cinnamon/applets/ScreenShot+RecordDesktop@tech71" ]; then
+    cp -ar /usr/share/hamonikr-themes/ScreenShot+RecordDesktop@tech71 /home/${USER}/.local/share/cinnamon/applets/
+  fi
+
+  if [ ! -d "/home/${USER}/.local/share/cinnamon/applets/sync@szlldm" ]; then
+    cp -ar /usr/share/hamonikr-themes/sync@szlldm /home/${USER}/.local/share/cinnamon/applets/
+  fi
+
   # 패널
   gsettings set org.cinnamon favorite-apps "['hamonikr-community.desktop', 'mintinstall.desktop', 'cinnamon-settings.desktop', 'nemo.desktop', 'hamonikr-help.desktop']"
   gsettings set org.cinnamon enabled-extensions "['smart-panel@mohammad-sn']"
