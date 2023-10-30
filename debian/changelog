@@ -1,3 +1,11 @@
+hamonikr-themes (4.6.9) kumkang; urgency=medium
+
+  [Kevin Kim]
+  * Add screen recoding applet Korean translation
+   - 원래 cinnamon.mo 파일에서 처리하는 것을 오버라이딩
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 30 Oct 2023 13:35:22 +0900
+
 hamonikr-themes (4.6.8) kumkang; urgency=medium
 
   [Kevin Kim]
