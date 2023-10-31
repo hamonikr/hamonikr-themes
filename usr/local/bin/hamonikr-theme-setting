@@ -64,7 +64,9 @@ update_dconf() {
   gsettings set org.cinnamon.settings-daemon.plugins.xsettings menus-have-icons true
 
   # 프로그램 메뉴 아이콘 사이트 24 로 조정
-  sed -i.bak 's/"value": 32/"value": 24/g' $HOME/.config/cinnamon/spices/menu@cinnamon.org/0.json
+  # menu-icon-size와 } 사이의 텍스트만 대상으로 32를 24로 치환.
+  # fav-icon-size 는 변경하지 않아야 함
+  sed -i.bak '/menu-icon-size/,/}/s/\("value": \)32/\124/' $HOME/.config/cinnamon/spices/menu@cinnamon.org/0.json
 
   # 테마 설정
   if [ -d /usr/share/icons/Stylish ]; then
