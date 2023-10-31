@@ -1,3 +1,12 @@
+hamonikr-themes (4.7.0) kumkang; urgency=medium
+
+  [Kevin Kim]
+  * Add setting for nimf to default im
+   - im-config default as nimf
+   - fixed menu icon size adjustment
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 31 Oct 2023 12:50:36 +0900
+
 hamonikr-themes (4.6.9) kumkang; urgency=medium
 
   [Kevin Kim]

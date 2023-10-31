@@ -63,8 +63,8 @@ update_dconf() {
   gsettings set org.cinnamon system-icon "hamonikr"
   gsettings set org.cinnamon.settings-daemon.plugins.xsettings menus-have-icons true
 
-  # 프로그램 메뉴 아아콘 사이트 24 로 조정
-  sed -i.bak 's/"value":32/"value":24/g' $HOME/.config/cinnamon/spices/menu@cinnamon.org/0.json
+  # 프로그램 메뉴 아이콘 사이트 24 로 조정
+  sed -i.bak 's/"value": 32/"value": 24/g' $HOME/.config/cinnamon/spices/menu@cinnamon.org/0.json
 
   # 테마 설정
   if [ -d /usr/share/icons/Stylish ]; then
@@ -76,6 +76,12 @@ update_dconf() {
   gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR'
   gsettings set org.cinnamon.theme name 'HamoniKR'
   gsettings set org.cinnamon.desktop.interface cursor-theme 'HamoniKR'
+
+  # nimf 입력기 기본으로 설정
+  if command -v nimf &> /dev/null ; then
+      im-config -n nimf
+      log "Update nimf as default"
+  fi
 
   # 한글과 영문이 섞여있는 폰트 설정은 사용 중인 언어에 따라서 다른 폰트명을 사용해야 제대로 표시 됨
   # 
