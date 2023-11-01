@@ -24,7 +24,8 @@ Conflicts: mint-clearloox-theme,
         cinnamon-themes, 
         hamonikr-jin-themes, 
         hamonikr-artwork
-Depends: plank
+Depends: plank, 
+         ffmpeg
 Recommends: fonts-nanum, 
         fonts-nanum-coding, 
         fonts-nanum-extra, 
