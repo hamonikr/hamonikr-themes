@@ -1,3 +1,11 @@
+hamonikr-themes (4.7.2) kumkang; urgency=medium
+
+  [Kevin Kim]
+  * Fixed applet translation bug
+   - Screen recording applet
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 01 Nov 2023 16:12:43 +0900
+
 hamonikr-themes (4.7.1) kumkang; urgency=medium
 
   [Kevin Kim]

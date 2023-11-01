@@ -31,6 +31,9 @@ update_dconf() {
   # Copy screen recoding applet to user space
   if [ ! -d "/home/${USER}/.local/share/cinnamon/applets/ScreenShot+RecordDesktop@tech71" ]; then
     cp -ar /usr/share/hamonikr-themes/ScreenShot+RecordDesktop@tech71 /home/${USER}/.local/share/cinnamon/applets/
+    # copy translation to user level
+    mkdir -p /home/${USER}/.local/share/locale/ko/LC_MESSAGES
+    cp -ar /usr/share/hamonikr-themes/home-locale/*.mo /home/${USER}/.local/share/locale/ko/LC_MESSAGES/    
   fi
 
   if [ ! -d "/home/${USER}/.local/share/cinnamon/applets/sync@szlldm" ]; then
