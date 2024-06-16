@@ -1,0 +1,49 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="-26.201" y1="1070.199951" x2="-26.201" y2="1082.599976" gradientTransform="matrix(0.177112,0,0,0.177112,8.7596,-187.595195)">
+<stop offset="0" style="stop-color:rgb(47.058824%,85.09804%,99.215686%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(48.235294%,87.058824%,100%);stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="-9.912" y1="1081.400024" x2="-9.912" y2="1139.800049" gradientTransform="matrix(0.177112,0,0,0.130647,8.7596,-134.619225)">
+<stop offset="0" style="stop-color:rgb(20.784314%,79.215688%,98.823529%);stop-opacity:1;"/>
+<stop offset="0.5" style="stop-color:rgb(31.37255%,83.137256%,100%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(30.19608%,79.607844%,96.470588%);stop-opacity:1;"/>
+</linearGradient>
+<filter id="alpha" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+  <feColorMatrix type="matrix" in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+</filter>
+<mask id="mask0">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="16" height="16" style="fill:rgb(0%,0%,0%);fill-opacity:0.976;stroke:none;"/>
+  </g>
+</mask>
+<clipPath id="clip1">
+  <rect x="0" y="0" width="16" height="16"/>
+</clipPath>
+<g id="surface5" clip-path="url(#clip1)">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(23.137255%,75.686276%,94.509804%);fill-opacity:1;" d="M 0.253906 13.269531 L 0.253906 13.445312 L 15.828125 13.445312 L 15.828125 13.269531 Z M 0.253906 13.65625 L 0.253906 13.75 C 0.253906 13.78125 0.253906 13.808594 0.257812 13.835938 L 15.820312 13.835938 C 15.824219 13.808594 15.828125 13.78125 15.828125 13.75 L 15.828125 13.65625 Z M 0.253906 13.65625 "/>
+</g>
+<mask id="mask1">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="16" height="16" style="fill:rgb(0%,0%,0%);fill-opacity:0.976;stroke:none;"/>
+  </g>
+</mask>
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="-9.617" y1="1138.400024" x2="-9.617" y2="1140.199951" gradientTransform="matrix(0.177112,0,0,0.177112,8.7596,-187.595195)">
+<stop offset="0" style="stop-color:rgb(23.137255%,75.686276%,94.509804%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(5.490196%,58.431375%,77.254903%);stop-opacity:1;"/>
+</linearGradient>
+<clipPath id="clip2">
+  <rect x="0" y="0" width="16" height="16"/>
+</clipPath>
+<g id="surface8" clip-path="url(#clip2)">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 0.300781 13.992188 C 0.394531 14.203125 0.605469 14.335938 0.832031 14.335938 L 15.246094 14.335938 C 15.484375 14.335938 15.6875 14.195312 15.777344 13.992188 Z M 0.300781 13.992188 "/>
+</g>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 0.832031 1.949219 L 4.75 1.949219 C 5.332031 1.949219 5.574219 3.203125 6.121094 3.203125 L 15.246094 3.203125 C 15.398438 3.203125 15.546875 3.261719 15.65625 3.371094 C 15.765625 3.480469 15.828125 3.628906 15.828125 3.785156 L 15.828125 12.730469 C 15.828125 13.050781 15.566406 12.371094 15.246094 12.371094 L 0.832031 12.371094 C 0.675781 12.371094 0.53125 12.3125 0.421875 12.203125 C 0.3125 12.09375 0.25 11.945312 0.25 11.789062 L 0.25 2.53125 C 0.25 2.378906 0.3125 2.230469 0.421875 2.121094 C 0.53125 2.011719 0.675781 1.949219 0.832031 1.949219 Z M 0.832031 1.949219 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 0.636719 6.644531 L 15.394531 6.644531 C 15.71875 6.644531 15.984375 6.835938 15.976562 7.074219 L 15.828125 13.902344 C 15.820312 14.140625 15.566406 14.332031 15.246094 14.332031 L 0.832031 14.332031 C 0.507812 14.332031 0.257812 14.140625 0.25 13.902344 L 0.0585938 7.074219 C 0.0507812 6.835938 0.316406 6.644531 0.636719 6.644531 Z M 0.636719 6.644531 "/>
+<use xlink:href="#surface5" mask="url(#mask0)"/>
+<use xlink:href="#surface8" mask="url(#mask1)"/>
+</g>
+</svg>

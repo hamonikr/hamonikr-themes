@@ -1,0 +1,49 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="-26.201" y1="1070.199951" x2="-26.201" y2="1082.599976" gradientTransform="matrix(0.265668,0,0,0.265668,13.1394,-281.392793)">
+<stop offset="0" style="stop-color:rgb(47.058824%,85.09804%,99.215686%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(48.235294%,87.058824%,100%);stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="-9.912" y1="1081.400024" x2="-9.912" y2="1139.800049" gradientTransform="matrix(0.265668,0,0,0.19597,13.1394,-201.928838)">
+<stop offset="0" style="stop-color:rgb(20.784314%,79.215688%,98.823529%);stop-opacity:1;"/>
+<stop offset="0.5" style="stop-color:rgb(31.37255%,83.137256%,100%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(30.19608%,79.607844%,96.470588%);stop-opacity:1;"/>
+</linearGradient>
+<filter id="alpha" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+  <feColorMatrix type="matrix" in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+</filter>
+<mask id="mask0">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="24" height="24" style="fill:rgb(0%,0%,0%);fill-opacity:0.976;stroke:none;"/>
+  </g>
+</mask>
+<clipPath id="clip1">
+  <rect x="0" y="0" width="24" height="24"/>
+</clipPath>
+<g id="surface5" clip-path="url(#clip1)">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(23.137255%,75.686276%,94.509804%);fill-opacity:1;" d="M 0.378906 19.902344 L 0.378906 20.167969 L 23.742188 20.167969 L 23.742188 19.902344 Z M 0.378906 20.484375 L 0.378906 20.625 C 0.378906 20.671875 0.382812 20.710938 0.386719 20.75 L 23.734375 20.75 C 23.738281 20.710938 23.742188 20.671875 23.742188 20.625 L 23.742188 20.484375 Z M 0.378906 20.484375 "/>
+</g>
+<mask id="mask1">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="24" height="24" style="fill:rgb(0%,0%,0%);fill-opacity:0.976;stroke:none;"/>
+  </g>
+</mask>
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="-9.617" y1="1138.400024" x2="-9.617" y2="1140.199951" gradientTransform="matrix(0.265668,0,0,0.265668,13.1394,-281.392793)">
+<stop offset="0" style="stop-color:rgb(23.137255%,75.686276%,94.509804%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(5.490196%,58.431375%,77.254903%);stop-opacity:1;"/>
+</linearGradient>
+<clipPath id="clip2">
+  <rect x="0" y="0" width="24" height="24"/>
+</clipPath>
+<g id="surface8" clip-path="url(#clip2)">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 0.453125 20.992188 C 0.59375 21.304688 0.90625 21.507812 1.25 21.503906 L 22.871094 21.503906 C 23.226562 21.503906 23.53125 21.292969 23.667969 20.992188 Z M 0.453125 20.992188 "/>
+</g>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 1.246094 2.925781 L 7.128906 2.925781 C 8 2.925781 8.363281 4.804688 9.179688 4.804688 L 22.867188 4.804688 C 23.097656 4.804688 23.320312 4.894531 23.484375 5.058594 C 23.648438 5.222656 23.742188 5.445312 23.738281 5.675781 L 23.738281 19.09375 C 23.738281 19.578125 23.351562 18.558594 22.867188 18.558594 L 1.246094 18.558594 C 1.015625 18.558594 0.792969 18.464844 0.628906 18.300781 C 0.46875 18.140625 0.375 17.917969 0.375 17.683594 L 0.375 3.796875 C 0.375 3.566406 0.46875 3.34375 0.628906 3.179688 C 0.792969 3.015625 1.015625 2.925781 1.246094 2.925781 Z M 1.246094 2.925781 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 0.957031 9.964844 L 23.09375 9.964844 C 23.578125 9.964844 23.976562 10.253906 23.964844 10.609375 L 23.738281 20.851562 C 23.730469 21.210938 23.351562 21.496094 22.867188 21.496094 L 1.246094 21.496094 C 0.765625 21.496094 0.386719 21.210938 0.375 20.851562 L 0.0859375 10.609375 C 0.0742188 10.253906 0.472656 9.964844 0.957031 9.964844 Z M 0.957031 9.964844 "/>
+<use xlink:href="#surface5" mask="url(#mask0)"/>
+<use xlink:href="#surface8" mask="url(#mask1)"/>
+</g>
+</svg>

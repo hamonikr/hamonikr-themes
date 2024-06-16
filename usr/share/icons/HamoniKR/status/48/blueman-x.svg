@@ -1,0 +1,36 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48" version="1.1">
+<defs>
+<filter id="alpha" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+  <feColorMatrix type="matrix" in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+</filter>
+<mask id="mask0">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="48" height="48" style="fill:rgb(0%,0%,0%);fill-opacity:0.7;stroke:none;"/>
+  </g>
+</mask>
+<mask id="mask1">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="48" height="48" style="fill:rgb(0%,0%,0%);fill-opacity:0.3;stroke:none;"/>
+  </g>
+</mask>
+<clipPath id="clip2">
+  <rect x="0" y="0" width="48" height="48"/>
+</clipPath>
+<g id="surface6" clip-path="url(#clip2)">
+<path style="fill:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:4;" d="M 32.984978 17.500012 L 42.012963 17.500012 C 42.282104 17.500012 42.498985 17.716893 42.498985 17.986034 L 42.498985 27.014019 C 42.498985 27.28316 42.282104 27.500041 42.012963 27.500041 L 32.984978 27.500041 C 32.71845 27.500041 32.498956 27.28316 32.498956 27.014019 L 32.498956 17.986034 C 32.498956 17.716893 32.71845 17.500012 32.984978 17.500012 Z M 32.984978 17.500012 " transform="matrix(1.494918,0,0,1.494918,-19.895761,2.8233)"/>
+</g>
+<clipPath id="clip1">
+  <rect x="0" y="0" width="48" height="48"/>
+</clipPath>
+<g id="surface8" clip-path="url(#clip1)">
+<path style="fill-rule:nonzero;fill:rgb(93.725491%,16.078432%,16.078432%);fill-opacity:1;stroke-width:0.99649;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(80.000001%,0%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 32.984978 16.499225 L 42.015576 16.499225 C 42.836065 16.499225 43.502385 17.162932 43.502385 17.986034 L 43.502385 27.014019 C 43.502385 27.83712 42.836065 28.500828 42.015576 28.500828 L 32.984978 28.500828 C 32.16449 28.500828 31.498169 27.83712 31.498169 27.014019 L 31.498169 17.986034 C 31.498169 17.162932 32.16449 16.499225 32.984978 16.499225 Z M 32.984978 16.499225 " transform="matrix(1.494918,0,0,1.494918,-19.895761,2.8233)"/>
+<use xlink:href="#surface6" mask="url(#mask1)"/>
+<path style="fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:4;" d="M 34.999617 20.000672 L 40.000938 24.99938 " transform="matrix(1.494918,0,0,1.494918,-19.895761,2.8233)"/>
+<path style="fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:4;" d="M 40.000938 20.000672 L 34.999617 24.99938 " transform="matrix(1.494918,0,0,1.494918,-19.895761,2.8233)"/>
+</g>
+</defs>
+<g id="surface1">
+<use xlink:href="#surface8" mask="url(#mask0)"/>
+</g>
+</svg>
