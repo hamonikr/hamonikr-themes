@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=HamoniKR-Light
+Comment=A MacOS BigSur like Gtk+ theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=HamoniKR-Light
+MetacityTheme=HamoniKR-Light
+IconTheme=Stylish
+CursorTheme=HamoniKR-Light-cursors
+ButtonLayout=close,minimize,maximize:menu
+
