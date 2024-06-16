@@ -1,3 +1,12 @@
+hamonikr-themes (4.7.3) stable; urgency=medium
+
+  [Kevin Kim]
+  * Release for paektu
+   - Add new icon theme Win10Sur
+   - Update Cursor theme
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 16 Jun 2024 22:33:13 +0900
+
 hamonikr-themes (4.7.2) kumkang; urgency=medium
 
   [Kevin Kim]
