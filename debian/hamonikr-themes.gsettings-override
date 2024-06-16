@@ -95,6 +95,9 @@ desktop-layout='true:true'
 use-desktop-grid=true
 font='Pretendard Medium 10'
 
+[org/nemo/icon-view]
+default-zoom-level='small'
+labels-beside-icons=false
 
 [org/cinnamon/desktop/default-applications/terminal]
 exec='gnome-terminal'
