@@ -60,7 +60,7 @@ date-format='%m-%e(%a), %p%l:%M'
 run-dialog-aliases=['<Super>r']
 
 [org/cinnamon/theme]
-name='HamoniKR'
+name='HamoniKR-Dark'
 
 [org/cinnamon/desktop/interface]
 cursor-blink-time=1200

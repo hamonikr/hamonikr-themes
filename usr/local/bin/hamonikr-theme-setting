@@ -80,7 +80,7 @@ update_dconf() {
   else
     gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
   fi
-  gsettings set org.cinnamon.desktop.interface cursor-theme 'HamoniKR'
+  gsettings set org.cinnamon.desktop.interface cursor-theme 'Cursor-Light'
   gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-Dark'
   gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR'
   gsettings set org.cinnamon.theme name 'HamoniKR-Dark'
