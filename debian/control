@@ -15,7 +15,8 @@ Replaces: libplank-common,
         cinnamon-themes, 
         mint-artwork,
         hamonikr-jin-themes, 
-        hamonikr-artwork
+        hamonikr-artwork,
+        hamonikr-icons
 Conflicts: mint-clearloox-theme, 
         mint-x-theme, 
         mint-y-theme, 
