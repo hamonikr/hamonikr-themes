@@ -11,14 +11,9 @@
 
 ## Install
 
-### HamoniKR (>=6.0)
+### Ubuntu, Debian, LinuxMint...
 ```
-sudo apt install hamonikr-themes
-```
-
-### Ubuntu (>=20.04)
-```
-wget -qO- https://update.hamonikr.org/add-update-repo.apt | sudo -E bash -
+wget -qO- https://pkg.hamonikr.org/add-hamonikr.apt | sudo -E bash -
 
 sudo apt install hamonikr-themes
 ```
