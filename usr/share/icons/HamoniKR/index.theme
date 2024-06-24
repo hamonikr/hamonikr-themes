@@ -2,7 +2,7 @@
 Name=HamoniKR
 Comment=MacOSX style icon theme
 # 현재 테마에서 아이콘 이름을 발견하지 못할때 상속할 테마
-Inherits=Numix-Circle-Light,hicolor
+Inherits=Humanity,hicolor
 Example=folder
 
 # KDE/Plasma Stuff
