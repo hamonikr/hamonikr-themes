@@ -1,1 +1,18 @@
-document-open-folder.svg
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+<defs>
+<linearGradient id="linear-pattern-0" gradientUnits="userSpaceOnUse" x1="32" y1="3.8" x2="32" y2="23.49" gradientTransform="matrix(0.375, 0, 0, 0.375, 0, 0)">
+<stop offset="0" stop-color="rgb(25.490196%, 74.117647%, 83.137255%)" stop-opacity="1"/>
+<stop offset="1" stop-color="rgb(50.980392%, 32.54902%, 83.921569%)" stop-opacity="1"/>
+</linearGradient>
+<linearGradient id="linear-pattern-1" gradientUnits="userSpaceOnUse" x1="32" y1="60.900002" x2="32" y2="18.719999" gradientTransform="matrix(0.375, 0, 0, 0.375, 0, 0)">
+<stop offset="0" stop-color="rgb(86.27451%, 87.058824%, 88.627451%)" stop-opacity="1"/>
+<stop offset="0.57" stop-color="rgb(87.058824%, 87.843137%, 89.411765%)" stop-opacity="1"/>
+<stop offset="0.81" stop-color="rgb(89.803922%, 90.588235%, 91.764706%)" stop-opacity="1"/>
+<stop offset="0.99" stop-color="rgb(94.901961%, 95.294118%, 95.686275%)" stop-opacity="1"/>
+<stop offset="1" stop-color="rgb(95.294118%, 95.686275%, 96.078431%)" stop-opacity="1"/>
+</linearGradient>
+</defs>
+<path fill-rule="nonzero" fill="url(#linear-pattern-0)" d="M 24 7.992188 C 24 6.933594 23.136719 6.070312 22.078125 6.070312 L 15.542969 6.070312 C 14.207031 6.070312 13.121094 5.003906 13.089844 3.667969 C 13.113281 2.308594 12.027344 1.191406 10.667969 1.160156 L 1.265625 1.160156 C 0.566406 1.160156 0 1.730469 0 2.433594 L 0 8.785156 L 24 8.785156 Z M 24 7.992188 "/>
+<path fill-rule="nonzero" fill="url(#linear-pattern-1)" d="M 22.078125 7.019531 L 1.921875 7.019531 C 0.863281 7.019531 0 7.878906 0 8.941406 L 0 20.917969 C 0 21.980469 0.863281 22.839844 1.921875 22.839844 L 22.078125 22.839844 C 23.136719 22.839844 24 21.980469 24 20.917969 L 24 8.941406 C 24 7.878906 23.136719 7.019531 22.078125 7.019531 Z M 22.078125 7.019531 "/>
+</svg>

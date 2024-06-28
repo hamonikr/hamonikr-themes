@@ -1,1 +1,6 @@
-help-about.svg
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+<path fill-rule="nonzero" fill="rgb(10.196078%, 49.803922%, 83.137255%)" fill-opacity="1" d="M 24 12 C 24 18.628906 18.628906 24 12 24 C 5.371094 24 0 18.628906 0 12 C 0 5.371094 5.371094 0 12 0 C 18.628906 0 24 5.371094 24 12 Z M 24 12 "/>
+<path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1" d="M 10.5 10.5 L 13.5 10.5 L 13.5 19.5 L 10.5 19.5 Z M 10.5 10.5 "/>
+<path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1" d="M 10.5 4.5 L 13.5 4.5 L 13.5 7.5 L 10.5 7.5 Z M 10.5 4.5 "/>
+</svg>

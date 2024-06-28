@@ -1,13 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <defs id="defs3051">
-    <style type="text/css" id="current-color-scheme">
-      .ColorScheme-Text {
-        color:#363636;
-      }
-      </style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="object-rotate-left.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#808080; } .ColorScheme-Highlight { color:#1d99f3; }
+  </style>
+    <style
+       type="text/css"
+       id="current-color-scheme-6">
+   .ColorScheme-Text { color:#808080; }
+  </style>
   </defs>
- <path style="fill:currentColor;fill-opacity:1;stroke:none" 
-     d="M 13.400391 4 L 10.107422 7.2929688 L 9.9003906 7.5 L 10.107422 7.7070312 L 13.400391 11 L 14.107422 10.292969 L 11.814453 8 L 14.099609 8 L 15 8 L 15 7 L 14.099609 7 L 11.814453 7 L 14.107422 4.7070312 L 13.400391 4 z M 16.5 7 C 16.223 7 16 7.223 16 7.5 C 16 7.777 16.223 8 16.5 8 C 16.777 8 17 7.777 17 7.5 C 17 7.223 16.777 7 16.5 7 z M 7.9492188 9 L 3 13.949219 L 9.0507812 20 L 14 15.050781 L 7.9492188 9 z M 19.5 9 C 19.223 9 19 9.223 19 9.5 C 19 9.777 19.223 10 19.5 10 C 19.777 10 20 9.777 20 9.5 C 20 9.223 19.777 9 19.5 9 z M 7.9492188 10.414062 L 12.726562 15.191406 L 9.1914062 18.726562 L 4.4140625 13.949219 L 7.9492188 10.414062 z M 20.5 12 C 20.223 12 20 12.223 20 12.5 C 20 12.777 20.223 13 20.5 13 C 20.777 13 21 12.777 21 12.5 C 21 12.223 20.777 12 20.5 12 z M 19.5 15 C 19.223 15 19 15.223 19 15.5 C 19 15.777 19.223 16 19.5 16 C 19.777 16 20 15.777 20 15.5 C 20 15.223 19.777 15 19.5 15 z M 16.5 17 C 16.223 17 16 17.223 16 17.5 C 16 17.777 16.223 18 16.5 18 C 16.777 18 17 17.777 17 17.5 C 17 17.223 16.777 17 16.5 17 z "
-     class="ColorScheme-Text"
-     />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="14.75"
+     inkscape:cx="8"
+     inkscape:cy="8"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg12"
+     inkscape:document-rotation="0" />
+  <g
+     transform="translate(-31.97559,-220.36218)"
+     id="g10">
+    <path
+       fill="#808080"
+       d="m 31.996971,235.37 10,0 0,-5 -10,4 z"
+       id="path2"
+       style="fill:#1a7fd4;fill-opacity:1" />
+    <path
+       fill="#808080"
+       opacity=".5"
+       d="m 42.022097,220.37909 0,10 5,0 -4,-10 z"
+       id="path4"
+       style="fill:#1a7fd4;fill-opacity:1" />
+    <path
+       fill="#808080"
+       d="m 40.00684,221.36218 c -1.487955,0 -2.570868,-0.0195 -3.40625,0.0312 -0.835382,0.0507 -1.484412,0.16931 -1.9375,0.625 -0.453088,0.45569 -0.574871,1.09872 -0.625,1.9375 -0.05013,0.83878 -0.03125,1.94285 -0.03125,3.4375 l 1,0 c 0,-1.50817 -0.01412,-2.61584 0.03125,-3.375 0.04537,-0.75916 0.171261,-1.10777 0.34375,-1.28125 0.172489,-0.17348 0.526402,-0.29793 1.28125,-0.34375 0.754848,-0.0458 1.842243,-0.0312 3.34375,-0.0312 l 0,-1 z"
+       id="path6"
+       style="fill:#e95420;fill-opacity:1" />
+    <path
+       fill="#808080"
+       d="m 34.491767,229.3622 2.508233,-3 -5,0"
+       id="path8"
+       style="fill:#e95420;fill-opacity:1" />
+  </g>
 </svg>
