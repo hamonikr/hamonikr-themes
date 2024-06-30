@@ -1,3 +1,11 @@
+hamonikr-themes (4.8.0) stable; urgency=medium
+
+  [Kevin Kim]
+  * Resize face image to 512x512
+   - for ukui greeter
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 01 Jul 2024 01:36:02 +0900
+
 hamonikr-themes (4.7.9) stable; urgency=medium
 
   [Kevin Kim]
