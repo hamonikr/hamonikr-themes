@@ -1,3 +1,10 @@
+hamonikr-themes (4.8.1) stable; urgency=medium
+
+  [Kevin Kim]
+  * Add fake gulim, malgun gothic
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 01 Jul 2024 10:30:22 +0900
+
 hamonikr-themes (4.8.0) stable; urgency=medium
 
   [Kevin Kim]
