@@ -26,6 +26,29 @@ log() {
     exec 1>&3 3>&-
 }
 
+detect_desktop_environment() {
+  if [ -n "$XDG_CURRENT_DESKTOP" ]; then
+    echo "$XDG_CURRENT_DESKTOP"
+  elif [ -n "$DESKTOP_SESSION" ]; then
+    echo "$DESKTOP_SESSION"
+  else
+    if [ -d "/usr/share/xsessions" ]; then
+      sessions=$(ls /usr/share/xsessions/ | sed 's/\.desktop$//')
+      if [ -n "$sessions" ]; then
+        echo "$sessions" | head -n 1
+      else
+        echo "cinnamon"
+      fi
+    else
+      echo "cinnamon"
+    fi
+  fi
+}
+
+# Detect Desktop Environment
+DESKTOP_ENV=$(detect_desktop_environment)
+DESKTOP_ENV=$(echo "$DESKTOP_ENV" | tr '[:upper:]' '[:lower:]')
+
 update_dconf() {
 
   # Copy screen recoding applet to user space
@@ -76,6 +99,11 @@ update_dconf() {
   # 하모니카가 아닌 환경에서는 start-here-symbolic 으로 메뉴아이콘을 변경
   if [ ! -f "/etc/hamonikr/info" ]; then
     sed -i.bak '/"menu-icon"/,/}/s/\("value": \)"hamonikr"/\1"start-here-symbolic"/' $HOME/.config/cinnamon/spices/menu@cinnamon.org/0.json
+  fi
+
+  # Update xfce icon configuration
+  if [ "${DESKTOP_ENV}" = "xfce" ]; then
+    sed -i "s/^button-icon=.*/button-icon=hamonikr/" $HOME/.config/xfce4/panel/whiskermenu-1.rc
   fi
 
   # 테마 설정
