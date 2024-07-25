@@ -1,5 +1,24 @@
 #!/bin/bash
 
+detect_desktop_environment() {
+  if [ -n "$XDG_CURRENT_DESKTOP" ]; then
+    echo "$XDG_CURRENT_DESKTOP"
+  elif [ -n "$DESKTOP_SESSION" ]; then
+    echo "$DESKTOP_SESSION"
+  else
+    if [ -d "/usr/share/xsessions" ]; then
+      sessions=$(ls /usr/share/xsessions/ | sed 's/\.desktop$//')
+      if [ -n "$sessions" ]; then
+        echo "$sessions" | head -n 1
+      else
+        echo "cinnamon"
+      fi
+    else
+      echo "cinnamon"
+    fi
+  fi
+}
+
 case "$1" in
     configure)
 
@@ -50,7 +69,16 @@ case "$1" in
           apt-key export EF6C07F6 | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/whale-key.gpg
           echo "Fixed Naver whale GPG KEY warning."
         fi
-      fi      
+      fi
+
+      # Detect Desktop Environment
+      DESKTOP_ENV=$(detect_desktop_environment)
+      DESKTOP_ENV=$(echo "$DESKTOP_ENV" | tr '[:upper:]' '[:lower:]')
+
+      # Update lightdm configuration
+      if [ -f /etc/lightdm/lightdm.conf.d/99-hamonikr-greeter.conf ]; then
+        sed -i "s/^user-session=.*/user-session=${DESKTOP_ENV}/" /etc/lightdm/lightdm.conf.d/99-hamonikr-greeter.conf
+      fi   
 
     ;;
     abort-upgrade|abort-remove|abort-deconfigure)
