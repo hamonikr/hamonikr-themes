@@ -1,4 +1,6 @@
 stage {
+  font-family: "나눔스퀘어라운드", Noto Sans CJK KR,Futura Bk bt, sans, Sans-Serif;
+  /* font-size: 10pt; */
   color: #242424;
 }
 
@@ -316,9 +318,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .menu,
 .popup-menu,
 .popup-combo-menu {
-  padding: 0 6px 3px;
+  padding: 4px 4px 6px 4px;
   color: #242424;
-  border-image: url("assets/menu.svg") 20 20 23 20;
+  border-image: url("assets/menu.svg") 15 15 15 15;
 }
 
 .menu-arrow,
@@ -352,7 +354,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .menu .popup-menu-content,
 .popup-menu .popup-menu-content,
 .popup-combo-menu .popup-menu-content {
-  padding: 1em 6px 1em 6px;
+  padding: 1em 0em 1em 0em;
 }
 
 .menu .popup-menu-item,
@@ -403,14 +405,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu-boxpointer {
-  -arrow-border-radius: 6px;
+  -arrow-border-radius: 3px;
   -arrow-background-color: rgba(0, 0, 0, 0);
   -arrow-border-width: 0;
   -arrow-border-color: rgba(0, 0, 0, 0);
   -arrow-base: 0;
   -arrow-rise: 0;
-  margin: 0.5em;
-  border-radius: 6px;
+  margin: 0.4em 0.5em 0.5em;
+  border-radius: 2px;
 }
 
 .popup-combo-menu {
