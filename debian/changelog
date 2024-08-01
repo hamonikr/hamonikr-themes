@@ -1,3 +1,10 @@
+hamonikr-themes (4.8.9) unstable; urgency=medium
+
+  [Kevin Kim]
+  * Update Stylish-Dark icon as default
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 01 Aug 2024 19:23:11 +0900
+
 hamonikr-themes (4.8.8) unstable; urgency=medium
 
   [Kevin Kim]

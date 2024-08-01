@@ -108,7 +108,7 @@ update_dconf() {
 
   # 테마 설정
   if [ -d /usr/share/icons/Stylish ]; then
-    gsettings set org.cinnamon.desktop.interface icon-theme 'Stylish'
+    gsettings set org.cinnamon.desktop.interface icon-theme 'Stylish-Dark'
   else
     gsettings set org.cinnamon.desktop.interface icon-theme 'HamoniKR'
   fi
