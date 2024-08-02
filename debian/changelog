@@ -1,3 +1,10 @@
+hamonikr-themes (4.9.1) unstable; urgency=medium
+
+  [Kevin Kim]
+  * Update lightdm setting greeter-show-manual-login as true
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 02 Aug 2024 17:51:30 +0900
+
 hamonikr-themes (4.9.0) unstable; urgency=medium
 
   [Kevin Kim]
