@@ -115,8 +115,8 @@ update_dconf() {
   gsettings set org.cinnamon.desktop.interface cursor-theme 'Cursor-Light'
   gsettings set org.cinnamon.desktop.interface gtk-theme 'HamoniKR-Dark'
   gsettings set org.cinnamon.desktop.wm.preferences theme 'HamoniKR'
-  gsettings set org.cinnamon.theme name 'HamoniKR-Dark'
-  
+  gsettings set org.cinnamon.theme name 'Paektu'
+    
   # nimf 입력기 기본으로 설정
   if command -v nimf &> /dev/null ; then
       im-config -n nimf
