@@ -155,6 +155,21 @@ update_dconf() {
 
 }
 
+show_conky() {
+  if [ -f "$HOME/.conky/paektu/simple.conf" ]; then
+    is_conky_simple=$(ps -ef | grep "conky -c $HOME/.conky/paektu/simple.conf" | grep -v "grep" | awk 'FNR {print $2}')
+
+    if [ "$is_conky_simple" = "" ]; then
+        cd $HOME/.conky/paektu
+        conky -c "$HOME/.conky/paektu/simple.conf" &
+    else
+        kill -9 $(ps -ef | grep "conky -c $HOME/.conky/paektu/simple.conf" | grep -v "grep" | awk 'FNR {print $2}')
+        cd $HOME/.conky/paektu
+        conky -c "$HOME/.conky/paektu/simple.conf" &      
+    fi
+  fi
+}
+
 mkdir -p $HOME/.hamonikr/theme
 
 case $1 in
@@ -173,6 +188,7 @@ case $1 in
 
       update_dconf
       gsettings set org.cinnamon panels-enabled "['1:0:top']"
+      show_conky
 
       # Mac 스타일로 Dock 사용하는 경우에는 plank 설정
       if [ -z $(pidof plank | grep '[0-9]') ] ; then
@@ -202,6 +218,7 @@ case $1 in
 
       update_dconf
       gsettings set org.cinnamon panels-enabled "['1:0:bottom']"
+      show_conky
   
       # 윈도우 스타일로 Dock 사용을 안하는 경우에는 kill plank
       if [ ! -z $(pidof plank | grep '[0-9]') ] ; then
