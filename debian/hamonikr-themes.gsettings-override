@@ -24,7 +24,7 @@ zoom-percent=150
 alignment='center'
 auto-pinning=true
 current-workspace-only=false
-dock-items=['whale.dockitem', 'nemo.dockitem', 'celluloid.dockitem', 'lollypop.dockitem', 'trash.dockitem', 'system-shutdown.dockitem']
+dock-items=['whale.dockitem', 'nemo.dockitem', 'celluloid.dockitem', 'lollypop.dockitem', 'trash.dockitem', 'system-shutdown.dockitem', 'desktop.dockitem']
 hide-delay=0
 hide-mode='intelligent'
 icon-size=48
@@ -47,27 +47,28 @@ picture-uri='file:////usr/share/backgrounds/hamonikr/default_background.jpg'
 
 [org/cinnamon]
 app-menu-icon-name='hamonikr'
-system-icon='hamonikr'
-enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:grouped-window-list@cinnamon.org:1', 'panel1:right:0:systray@cinnamon.org:2', 'panel1:right:1:printers@cinnamon.org:3', 'panel1:right:2:removable-drives@cinnamon.org:4', 'panel1:right:3:bluetooth@cinnamon.org:5', 'panel1:right:4:sound@cinnamon.org:6', 'panel1:right:5:calendar@cinnamon.org:7', 'panel1:right:6:notifications@cinnamon.org:8', 'panel1:right:7:network@cinnamon.org:9', 'panel1:right:8:power@cinnamon.org:10', 'panel1:right:9:user@cinnamon.org:11', 'panel1:right:10:show-desktop@cinnamon.org:12']
-enabled-extensions=['smart-panel@mohammad-sn']
-favorite-apps=['nemo.desktop', 'cinnamon-settings.desktop', 'hamonikr-community.desktop', 'hamonikr-help.desktop']
-next-applet-id=14
+enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:grouped-window-list@cinnamon.org:1', 'panel1:right:0:ScreenShot+RecordDesktop@tech71:2', 'panel1:right:1:systray@cinnamon.org:3', 'panel1:right:2:printers@cinnamon.org:4', 'panel1:right:3:removable-drives@cinnamon.org:5', 'panel1:right:4:bluetooth@cinnamon.org:6', 'panel1:right:5:sound@cinnamon.org:7', 'panel1:right:6:calendar@cinnamon.org:8', 'panel1:right:7:notifications@cinnamon.org:9', 'panel1:right:8:network@cinnamon.org:10', 'panel1:right:9:power@cinnamon.org:11', 'panel1:right:10:user@cinnamon.org:12', 'panel1:right:11:show-desktop@cinnamon.org:13']
+enabled-extensions=['smart-panel@mohammad-sn', 'gTile@shuairan']
+enabled-search-providers=['google@hamonikr.org']
+favorite-apps=['hamonikr-community.desktop', 'mintinstall.desktop', 'cinnamon-settings.desktop', 'nemo.desktop', 'hamonikr-help.desktop']
+next-applet-id=18
 panel-zone-icon-sizes='[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
 panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
 panels-enabled=['1:0:top']
 panels-height=['1:33']
-date-format='%m-%e(%a), %p%l:%M'
+system-icon='hamonikr'
+date-format='%m-%d(%a), %p %I:%M'
 run-dialog-aliases=['<Super>r']
 
 [org/cinnamon/theme]
-name='HamoniKR-Dark'
+name='Paektu'
 
 [org/cinnamon/desktop/interface]
 cursor-blink-time=1200
-cursor-theme='HamoniKR'
+cursor-theme='Cursor-Light'
 font-name='Pretendard 10'
 gtk-theme='HamoniKR-Dark'
-icon-theme='HamoniKR'
+icon-theme='Stylish-Dark'
 scaling-factor=uint32 0
 
 [org/gnome/desktop/interface]
@@ -79,6 +80,62 @@ toolkit-accessibility=false
 theme='HamoniKR-Dark'
 titlebar-font='Pretendard Medium 11'
 
+[org/gnome/desktop/interface]
+can-change-accels=false
+clock-show-date=false
+clock-show-seconds=false
+cursor-blink=true
+cursor-blink-time=1200
+cursor-blink-timeout=10
+cursor-size=24
+cursor-theme='Cursor-Light'
+document-font-name='Pretendard 10'
+enable-animations=true
+font-name='Pretendard 10'
+gtk-color-palette='black:white:gray50:red:purple:blue:light blue:green:yellow:orange:lavender:brown:goldenrod4:dodger blue:pink:light green:gray10:gray30:gray75:gray90'
+gtk-color-scheme=''
+gtk-enable-primary-paste=true
+gtk-im-module=''
+gtk-im-preedit-style='callback'
+gtk-im-status-style='callback'
+gtk-key-theme='Default'
+gtk-theme='HamoniKR-Dark'
+gtk-timeout-initial=200
+gtk-timeout-repeat=20
+icon-theme='Stylish-Dark'
+menubar-accel='F10'
+menubar-detachable=false
+menus-have-tearoff=false
+monospace-font-name='Hack Nerd Font 9'
+scaling-factor=uint32 0
+text-scaling-factor=1.0
+toolbar-detachable=false
+toolbar-icons-size='large'
+toolbar-style='both-horiz'
+toolkit-accessibility=false
+
+[org/gnome/desktop/wm/preferences]
+action-double-click-titlebar='toggle-maximize'
+action-middle-click-titlebar='lower'
+action-right-click-titlebar='menu'
+audible-bell=false
+auto-raise=false
+auto-raise-delay=500
+button-layout='menu:minimize,maximize,close'
+disable-workarounds=false
+focus-mode='click'
+focus-new-windows='smart'
+mouse-button-modifier='<Alt>'
+num-workspaces=4
+raise-on-click=true
+resize-with-right-button=true
+theme='HamoniKR'
+titlebar-font='Pretendard Medium 11'
+titlebar-uses-system-font=false
+visual-bell=false
+visual-bell-type='fullscreen-flash'
+workspace-names=@as []
+
 [org/cinnamon/settings-daemon/plugins/xsettings]
 menus-have-icons=true
 
@@ -86,8 +143,29 @@ menus-have-icons=true
 www=['XF86WWW', '<Super>w']
 screenreader=['<Alt><Super>s']
 
+[org/cinnamon/desktop/keybindings]
+custom-list=['custom0', 'custom1', 'custom2']
+
+[org/cinnamon/desktop/keybindings/custom-keybindings/custom0]
+binding=['<Shift><Primary><Alt>p']
+command='shutter -s'
+name='특정영역 화면캡처'
+
+[org/cinnamon/desktop/keybindings/custom-keybindings/custom1]
+binding=['<Primary><Alt>p']
+command='shutter -w'
+name='선택한 윈도우 화면캡처'
+
+[org/cinnamon/desktop/keybindings/custom-keybindings/custom2]
+binding=['<Primary><Alt>a']
+command='ask_openai'
+name='AI 질의'
+
+[org/cinnamon/desktop/keybindings/media-keys]
+help=['F1']
+
 [org/nemo/desktop]
-computer-icon-visible=true
+computer-icon-visible=false
 home-icon-visible=true
 trash-icon-visible=true
 volumes-visible=true
