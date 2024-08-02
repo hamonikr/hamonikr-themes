@@ -1,3 +1,11 @@
+hamonikr-themes (4.9.0) unstable; urgency=medium
+
+  [Kevin Kim]
+  * Add show_conky function
+  * install conky fonts
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 02 Aug 2024 11:29:30 +0900
+
 hamonikr-themes (4.8.9) unstable; urgency=medium
 
   [Kevin Kim]
