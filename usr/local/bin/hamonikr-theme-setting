@@ -65,7 +65,7 @@ update_dconf() {
 
   # 패널
   gsettings set org.cinnamon favorite-apps "['hamonikr-community.desktop', 'mintinstall.desktop', 'cinnamon-settings.desktop', 'nemo.desktop', 'hamonikr-help.desktop']"
-  gsettings set org.cinnamon enabled-extensions "['smart-panel@mohammad-sn']"
+  gsettings set org.cinnamon enabled-extensions "['smart-panel@mohammad-sn', 'gTile@shuairan']"
   gsettings set org.cinnamon panels-height "['1:33']"
   gsettings set org.cinnamon panel-zone-icon-sizes '[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
   gsettings set org.cinnamon panel-zone-symbolic-icon-sizes '[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
