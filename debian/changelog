@@ -1,3 +1,9 @@
+hamonikr-themes (4.9.3) unstable; urgency=medium
+
+  * NEMO Preview Settings Change
+
+ -- HamoniKR <pkg@hamonikr.org>  Sat, 03 Aug 2024 23:20:39 +0900
+
 hamonikr-themes (4.9.2) unstable; urgency=medium
 
   * Resized face icon size to 180px

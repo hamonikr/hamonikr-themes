@@ -89,8 +89,13 @@ update_dconf() {
   gsettings set org.cinnamon system-icon "hamonikr"
   gsettings set org.cinnamon.settings-daemon.plugins.xsettings menus-have-icons true
 
-  # 탐색기 아이콘 기본 크기
-  gsettings set org.nemo.icon-view default-zoom-level "small"
+  # nemo 파일 탐색기 
+  # 아이콘 기본 크기
+  gsettings set org.nemo.icon-view default-zoom-level "small" 
+  # 10M 이하 파일까지 미리보기
+  gsettings set org.nemo.preferences thumbnail-limit "uint64 10485760"
+  # 숨김파일 보이기
+  gsettings set org.nemo.preferences show-hidden-files true
 
   # 프로그램 메뉴 아이콘 사이트 24 로 조정
   # menu-icon-size와 } 사이의 텍스트만 대상으로 32를 24로 치환.

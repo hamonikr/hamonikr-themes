@@ -177,6 +177,12 @@ font='Pretendard Medium 10'
 default-zoom-level='small'
 labels-beside-icons=false
 
+[org/nemo/preferences]
+inherit-show-thumbnails=false
+show-hidden-files=true
+show-image-thumbnails='local-only'
+thumbnail-limit=uint64 10485760
+
 [org/cinnamon/desktop/default-applications/terminal]
 exec='gnome-terminal'
 
