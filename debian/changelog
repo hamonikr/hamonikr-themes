@@ -1,3 +1,10 @@
+hamonikr-themes (4.9.3+h1) unstable; urgency=medium
+
+  * Release for bookworm arm64
+   - No changes
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 04 Aug 2024 21:15:47 +0900
+
 hamonikr-themes (4.9.3) unstable; urgency=medium
 
   * NEMO Preview Settings Change
