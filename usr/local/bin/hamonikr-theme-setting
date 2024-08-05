@@ -71,18 +71,19 @@ update_dconf() {
   gsettings set org.cinnamon panel-zone-symbolic-icon-sizes '[{"panelId": 1, "left": 24, "center": 24, "right": 16}]'
   gsettings set org.cinnamon enabled-applets "['panel1:left:0:menu@cinnamon.org:0', 
   'panel1:left:1:grouped-window-list@cinnamon.org:1', 
-  'panel1:right:0:ScreenShot+RecordDesktop@tech71:2', 
-  'panel1:right:1:systray@cinnamon.org:3', 
-  'panel1:right:2:printers@cinnamon.org:4', 
-  'panel1:right:3:removable-drives@cinnamon.org:5', 
-  'panel1:right:4:bluetooth@cinnamon.org:6', 
-  'panel1:right:5:sound@cinnamon.org:7', 
-  'panel1:right:6:calendar@cinnamon.org:8', 
-  'panel1:right:7:notifications@cinnamon.org:9', 
-  'panel1:right:8:network@cinnamon.org:10', 
-  'panel1:right:9:power@cinnamon.org:11', 
-  'panel1:right:10:user@cinnamon.org:12', 
-  'panel1:right:11:show-desktop@cinnamon.org:13']"
+  'panel1:right:3:ScreenShot+RecordDesktop@tech71:2', 
+  'panel1:right:4:systray@cinnamon.org:3', 
+  'panel1:right:5:printers@cinnamon.org:4', 
+  'panel1:right:6:removable-drives@cinnamon.org:5', 
+  'panel1:right:7:bluetooth@cinnamon.org:6', 
+  'panel1:right:8:sound@cinnamon.org:7', 
+  'panel1:right:9:calendar@cinnamon.org:8', 
+  'panel1:right:10:notifications@cinnamon.org:9', 
+  'panel1:right:11:network@cinnamon.org:10', 
+  'panel1:right:12:power@cinnamon.org:11', 
+  'panel1:right:13:user@cinnamon.org:12', 
+  'panel1:right:14:show-desktop@cinnamon.org:13', 
+  'panel1:right:1:xapp-status@cinnamon.org:19']"
 
   # 시작메뉴, 시스템 정보 기본 아이콘
   gsettings set org.cinnamon app-menu-icon-name "hamonikr"
