@@ -43,6 +43,12 @@ case "$1" in
           cp /etc/skel/.config/plank/dock1/launchers/*.dockitem /home/${RUID}/.config/plank/dock1/launchers/
           chown ${RUID}:${RUID} /home/${RUID}/.config/plank -R          
         fi
+
+        if [ ! -f /home/${RUID}/.config/autostart/default-conky.desktop ] ; then
+          [ ! -d "/home/${RUID}/.config/autostart/" ] && mkdir -p /home/${RUID}/.config/autostart/
+          cp /etc/skel/.config/autostart/default-conky.desktop /home/${RUID}/.config/autostart/
+          chown ${RUID}:${RUID} /home/${RUID}/.config/autostart -R
+        fi        
       fi
 
       if [ ! -z "$RUID" ] ; then

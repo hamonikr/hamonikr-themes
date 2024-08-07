@@ -2,3 +2,4 @@
 Type=Application
 Name=Show default conky
 Exec=bash -c '/usr/local/bin/show-default-conky; rm ~/.config/autostart/default-conky.desktop'
+X-GNOME-Autostart-Delay=7
