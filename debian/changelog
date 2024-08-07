@@ -1,3 +1,10 @@
+hamonikr-themes (4.9.7) unstable; urgency=medium
+
+  * Copy gTiles extension to user space
+   - Error keyboard settings, if not exist in .local folder
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 08 Aug 2024 00:40:58 +0900
+
 hamonikr-themes (4.9.6) unstable; urgency=medium
 
   * Add autostart default-conky.desktop
