@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# USER privilege script
+
+[ "$EUID" = 0 ] && echo "Run with user authority. (EUID : $EUID)" && exit
+[ ! -d "/home/${USER}/.hamonikr/" ] && mkdir -p /home/${USER}/.hamonikr/
+[ ! -d "/home/${USER}/.config/autostart/" ] && mkdir -p /home/${USER}/.config/autostart/
+
+log() {
+    # stdout
+    echo "$@"
+    # write to logfile
+    mkdir -p $HOME/.hamonikr/log
+    exec 3>&1 1>>$HOME/.hamonikr/log/${0##*/}.log 2>&1 && echo "$(date +%Y-%m-%d_%H:%M_%S) ${0##*/} : $@"
+    # stdout reset
+    exec 1>&3 3>&-
+}
+
+show_conky() {
+  # Check if conky command exists
+  if command -v conky &> /dev/null; then
+    # conky - simple
+    if [ -f "$HOME/.conky/paektu/simple.conf" ]; then
+      is_conky_simple=$(ps -ef | grep "conky -c $HOME/.conky/paektu/simple.conf" | grep -v "grep" | awk 'FNR {print $2}')
+
+      if [ "$is_conky_simple" = "" ]; then
+          cd $HOME/.conky/paektu
+          conky -c "$HOME/.conky/paektu/simple.conf" &
+      else
+          kill -9 $(ps -ef | grep "conky -c $HOME/.conky/paektu/simple.conf" | grep -v "grep" | awk 'FNR {print $2}')
+          cd $HOME/.conky/paektu
+          conky -c "$HOME/.conky/paektu/simple.conf" &      
+      fi
+    fi
+  else
+    log "Conky command not found. Skipping conky configuration."
+  fi
+  # conky - widget : sometimes break
+  # if [ -f "$HOME/.conky/paektu/widget.conf" ]; then
+  #   is_conky_simple=$(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
+
+  #   if [ "$is_conky_simple" = "" ]; then
+  #       cd $HOME/.conky/paektu
+  #       conky -c "$HOME/.conky/paektu/widget.conf" &
+  #   else
+  #       kill -9 $(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
+  #       cd $HOME/.conky/paektu
+  #       conky -c "$HOME/.conky/paektu/widget.conf" &      
+  #   fi
+  # fi
+}
+
+# Execute show_conky function with error handling
+(show_conky || true)
