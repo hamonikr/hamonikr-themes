@@ -1,3 +1,9 @@
+hamonikr-themes (4.9.8) unstable; urgency=medium
+
+  * Remove greeter-show-manual-login=true 
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 09 Aug 2024 03:40:34 +0900
+
 hamonikr-themes (4.9.7) unstable; urgency=medium
 
   * Copy gTiles extension to user space
