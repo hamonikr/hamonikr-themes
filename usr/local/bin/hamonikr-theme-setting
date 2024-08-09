@@ -145,14 +145,14 @@ update_dconf() {
       gsettings set org.cinnamon.desktop.interface font-name 'Pretendard 10'
       gsettings set org.nemo.desktop font 'Pretendard Medium 10'        
       gsettings set org.gnome.desktop.interface document-font-name 'Pretendard 10'    
-      gsettings set org.gnome.desktop.interface monospace-font-name 'Hack Nerd Font 9'
+      gsettings set org.gnome.desktop.interface monospace-font-name 'Monaco Nerd Font 10'
       gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Pretendard Medium 11'
     ;;
     *)
       gsettings set org.cinnamon.desktop.interface font-name 'Pretendard 10'
       gsettings set org.nemo.desktop font 'Pretendard Medium 10'        
       gsettings set org.gnome.desktop.interface document-font-name 'Pretendard 10'    
-      gsettings set org.gnome.desktop.interface monospace-font-name 'Hack Nerd Font 9'
+      gsettings set org.gnome.desktop.interface monospace-font-name 'Monaco Nerd Font 10'
       gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Pretendard Medium 11'
     ;;
   esac  

@@ -27,14 +27,9 @@ Conflicts: mint-clearloox-theme,
         hamonikr-artwork
 Depends: plank, 
          ffmpeg
-Recommends: fonts-nanum, 
-        fonts-nanum-coding, 
-        fonts-nanum-extra, 
-        fonts-noto-cjk-extra, 
-        hamonikr-icons, 
+Recommends: hamonikr-icons, 
         hamonikr-artwork, 
-        hamonikr-backgrounds, 
-        hamonikr-help
+        hamonikr-backgrounds
 Architecture: all
 Description: HamoniKR gtk and Cinnamon themes
  Mac like theme for HamoniKR OS.

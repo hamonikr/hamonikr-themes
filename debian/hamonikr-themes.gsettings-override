@@ -73,7 +73,7 @@ scaling-factor=uint32 0
 
 [org/gnome/desktop/interface]
 document-font-name='Pretendard 10'
-monospace-font-name='Hack Nerd Font 9'
+monospace-font-name='Monaco Nerd Font 10'
 toolkit-accessibility=false
 
 [org/cinnamon/desktop/wm/preferences]
@@ -106,7 +106,7 @@ icon-theme='Stylish-Dark'
 menubar-accel='F10'
 menubar-detachable=false
 menus-have-tearoff=false
-monospace-font-name='Hack Nerd Font 9'
+monospace-font-name='Monaco Nerd Font 10'
 scaling-factor=uint32 0
 text-scaling-factor=1.0
 toolbar-detachable=false
