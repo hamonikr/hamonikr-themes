@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# A simple script to display wifi name
+# 'ssid -i' = with icon, 'ssid' = text only
+# Cheers!
+# Addy
+
+# Set the path to iwgetid command
+IWGETID_PATH=$(which iwgetid)
+
+if [[ -z "${IWGETID_PATH}" ]]; then
+  echo "iwgetid command not found"
+  exit 1
+fi
+
+SSID_NAME=$(${IWGETID_PATH} -r)
+
+if [[ "${SSID_NAME}" != "" ]]; then
+  if  [[ $1 = "-i" ]]; then
+    echo "  ${SSID_NAME}"
+  else
+    echo "${SSID_NAME}"
+  fi
+else
+  echo "Not Connected"
+fi
+
+exit

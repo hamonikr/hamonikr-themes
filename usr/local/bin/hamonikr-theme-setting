@@ -145,14 +145,14 @@ update_dconf() {
       gsettings set org.cinnamon.desktop.interface font-name 'Pretendard 10'
       gsettings set org.nemo.desktop font 'Pretendard Medium 10'        
       gsettings set org.gnome.desktop.interface document-font-name 'Pretendard 10'    
-      gsettings set org.gnome.desktop.interface monospace-font-name 'Monaco Nerd Font 10'
+      gsettings set org.gnome.desktop.interface monospace-font-name 'Monaco Nerd Font 9'
       gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Pretendard Medium 11'
     ;;
     *)
       gsettings set org.cinnamon.desktop.interface font-name 'Pretendard 10'
       gsettings set org.nemo.desktop font 'Pretendard Medium 10'        
       gsettings set org.gnome.desktop.interface document-font-name 'Pretendard 10'    
-      gsettings set org.gnome.desktop.interface monospace-font-name 'Monaco Nerd Font 10'
+      gsettings set org.gnome.desktop.interface monospace-font-name 'Monaco Nerd Font 9'
       gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Pretendard Medium 11'
     ;;
   esac  
@@ -162,6 +162,9 @@ update_dconf() {
   gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr/default_background.jpg"
   gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr/default_background.jpg"                
   gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr/default_background.jpg'
+
+  # 기본 conky
+  # /usr/local/bin/show-default-conky || true
 
 }
 
@@ -212,7 +215,6 @@ case $1 in
 
       update_dconf
       gsettings set org.cinnamon panels-enabled "['1:0:bottom']"
-      show_conky
   
       # 윈도우 스타일로 Dock 사용을 안하는 경우에는 kill plank
       if [ ! -z $(pidof plank | grep '[0-9]') ] ; then

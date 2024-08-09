@@ -32,22 +32,24 @@ show_conky() {
           conky -c "$HOME/.conky/paektu/simple.conf" &      
       fi
     fi
+
+    # conky - widget
+    if [ -f "$HOME/.conky/paektu/widget.conf" ]; then
+      is_conky_simple=$(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
+
+      if [ "$is_conky_simple" = "" ]; then
+          cd $HOME/.conky/paektu
+          conky -c "$HOME/.conky/paektu/widget.conf" &
+      else
+          kill -9 $(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
+          cd $HOME/.conky/paektu
+          conky -c "$HOME/.conky/paektu/widget.conf" &      
+      fi
+    fi    
+    
   else
     log "Conky command not found. Skipping conky configuration."
   fi
-  # conky - widget : sometimes break
-  # if [ -f "$HOME/.conky/paektu/widget.conf" ]; then
-  #   is_conky_simple=$(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
-
-  #   if [ "$is_conky_simple" = "" ]; then
-  #       cd $HOME/.conky/paektu
-  #       conky -c "$HOME/.conky/paektu/widget.conf" &
-  #   else
-  #       kill -9 $(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
-  #       cd $HOME/.conky/paektu
-  #       conky -c "$HOME/.conky/paektu/widget.conf" &      
-  #   fi
-  # fi
 }
 
 # Execute show_conky function with error handling
