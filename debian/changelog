@@ -1,3 +1,10 @@
+hamonikr-themes (5.0.2) unstable; urgency=medium
+
+  * Changed default terminal font as MesloLGS NF
+   - Cause https://github.com/romkatv/powerlevel10k
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 11 Aug 2024 06:54:06 +0900
+
 hamonikr-themes (5.0.1) unstable; urgency=medium
 
   * Removed conky autostart
