@@ -1,3 +1,10 @@
+hamonikr-themes (5.0.1) unstable; urgency=medium
+
+  * Removed conky autostart
+   - Cause live boot screen size too small
+
+ -- HamoniKR <pkg@hamonikr.org>  Sat, 10 Aug 2024 11:02:42 +0900
+
 hamonikr-themes (5.0.0) unstable; urgency=medium
 
   * Fix conky autostart

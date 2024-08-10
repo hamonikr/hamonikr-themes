@@ -163,9 +163,6 @@ update_dconf() {
   gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr/default_background.jpg"                
   gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr/default_background.jpg'
 
-  # 기본 conky
-  # /usr/local/bin/show-default-conky || true
-
 }
 
 mkdir -p $HOME/.hamonikr/theme
