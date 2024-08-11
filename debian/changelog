@@ -1,3 +1,9 @@
+hamonikr-themes (5.0.3) unstable; urgency=medium
+
+  * Fix applet and extension
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 11 Aug 2024 20:54:13 +0900
+
 hamonikr-themes (5.0.2) unstable; urgency=medium
 
   * Changed default terminal font as MesloLGS NF
