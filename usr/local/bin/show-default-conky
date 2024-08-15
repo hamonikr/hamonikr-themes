@@ -52,5 +52,28 @@ show_conky() {
   fi
 }
 
-# Execute show_conky function with error handling
-(show_conky || true)
+# 가상화 환경이 아니고 화면 가로 크기가 1920 이상인 경우에만 동작해야 함
+# 가상화 환경을 확인하는 방법 : https://www.baeldung.com/linux/determine-virtualization-tech
+# systemd-detect-virt 의 결과가 none 아니면 가상화 환경
+
+# 가상화 환경 확인 및 해상도 체크 후 show_conky 실행
+check_virtualization_and_resolution() {
+  # Check if the system is virtualized
+  if [[ "$(systemd-detect-virt)" != "none" ]]; then
+    log "Virtualization detected. Skipping conky configuration."
+    return 1
+  fi
+
+  # Check screen resolution width using xrandr
+  screen_width=$(xrandr | grep '*' | awk '{print $1}' | awk -Fx '{print $1}' | sort -nr | head -n1)
+
+  if [[ "$screen_width" -ge 1920 ]]; then
+    log "Screen width is $screen_width, executing conky configuration."
+    show_conky
+  else
+    log "Screen width is less than 1920, skipping conky configuration."
+  fi
+}
+
+# Execute the function with error handling
+(check_virtualization_and_resolution || true)

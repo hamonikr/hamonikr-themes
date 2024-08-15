@@ -1,3 +1,10 @@
+hamonikr-themes (5.0.4) unstable; urgency=medium
+
+  * Fix conky widget wrong path
+  * Update show-default-conky command
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 15 Aug 2024 20:59:21 +0900
+
 hamonikr-themes (5.0.3) unstable; urgency=medium
 
   * Fix applet and extension
