@@ -111,7 +111,7 @@ update_dconf() {
   sed -i.bak '/menu-icon-size/,/}/s/\("value": \)32/\124/' $HOME/.config/cinnamon/spices/menu@cinnamon.org/0.json
   # 하모니카가 아닌 환경에서는 start-here-symbolic 으로 메뉴아이콘을 변경
   if [ ! -f "/etc/hamonikr/info" ]; then
-    sed -i.bak '/"menu-icon"/,/}/s/\("value": \)"hamonikr"/\1"start-here-symbolic"/' $HOME/.config/cinnamon/spices/menu@cinnamon.org/0.json
+    sed -i.bak '/"menu-icon"/,/"value":/s/\("value": "\)hamonikr"/\1start-here-symbolic"/' $HOME/.config/cinnamon/spices/menu@cinnamon.org/0.json
   fi
 
   # Update xfce icon configuration
