@@ -104,6 +104,9 @@ update_dconf() {
   gsettings set org.nemo.preferences thumbnail-limit "uint64 10485760"
   # 숨김파일 보이기
   gsettings set org.nemo.preferences show-hidden-files true
+  # 바탕화면 내컴퓨터와 홈 아이콘
+  gsettings set org.nemo.desktop computer-icon-visible true
+  gsettings set org.nemo.desktop home-icon-visible true
 
   # 프로그램 메뉴 아이콘 사이트 24 로 조정
   # menu-icon-size와 } 사이의 텍스트만 대상으로 32를 24로 치환.
