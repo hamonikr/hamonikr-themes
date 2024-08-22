@@ -1,8 +1,14 @@
-hamonikr-themes (5.0.5) unstable; urgency=medium
+hamonikr-themes (5.0.6) unstable; urgency=medium
 
   * Show home and my computer icon in desktop
 
  -- HamoniKR <pkg@hamonikr.org>  Thu, 22 Aug 2024 12:34:14 +0900
+
+hamonikr-themes (5.0.5) unstable; urgency=medium
+
+  * Fix start-here-symbolic icon on ubuntu
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 18 Aug 2024 00:06:55 +0900
 
 hamonikr-themes (5.0.4) unstable; urgency=medium
 
