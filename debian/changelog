@@ -1,3 +1,9 @@
+hamonikr-themes (5.0.8) unstable; urgency=medium
+
+  * Add default-conky.desktop
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 23 Aug 2024 14:01:20 +0900
+
 hamonikr-themes (5.0.7) unstable; urgency=medium
 
   * computer-icon-visible false
