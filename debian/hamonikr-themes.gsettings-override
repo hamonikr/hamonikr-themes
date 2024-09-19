@@ -179,7 +179,7 @@ labels-beside-icons=false
 
 [org/nemo/preferences]
 inherit-show-thumbnails=false
-show-hidden-files=true
+show-hidden-files=false
 show-image-thumbnails='local-only'
 thumbnail-limit=uint64 10485760
 
