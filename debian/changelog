@@ -1,3 +1,9 @@
+hamonikr-themes (5.1.0) unstable; urgency=medium
+
+  * Changed shortcut banner as default conky widget
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 20 Sep 2024 13:47:40 +0900
+
 hamonikr-themes (5.0.9) unstable; urgency=medium
 
   * Changed show-hidden-files as false

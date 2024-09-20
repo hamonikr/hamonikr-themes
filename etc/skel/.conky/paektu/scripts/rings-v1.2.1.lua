@@ -62,7 +62,7 @@ settings_table = {
     },
     {
         name='hwmon',
-        arg='2 temp 1',
+        arg='1 temp 1',
         max=100,
         bg_colour=0xFFFFFF,
         bg_alpha=0.2,

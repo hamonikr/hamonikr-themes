@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# A simple script to display wifi name
+# A simple script to display wifi name or ethernet connection status
 # 'ssid -i' = with icon, 'ssid' = text only
 # Cheers!
 # Addy
@@ -22,7 +22,19 @@ if [[ "${SSID_NAME}" != "" ]]; then
     echo "${SSID_NAME}"
   fi
 else
-  echo "Not Connected"
+  # Detect Ethernet interface name
+  ETH_INTERFACE=$(ip -o link show | awk '{print $2}' | grep -E '^e.*:' | tr -d ':')
+  
+  # Check for Ethernet connection
+  if [[ -n "${ETH_INTERFACE}" && $(cat /sys/class/net/${ETH_INTERFACE}/operstate) == "up" ]]; then
+    if [[ $1 = "-i" ]]; then
+      echo "  ${ETH_INTERFACE}"
+    else
+      echo "${ETH_INTERFACE}"
+    fi
+  else
+    echo "Not Connected"
+  fi
 fi
 
 exit

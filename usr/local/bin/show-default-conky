@@ -19,34 +19,48 @@ log() {
 show_conky() {
   # Check if conky command exists
   if command -v conky &> /dev/null; then
-    # conky - simple
-    if [ -f "$HOME/.conky/paektu/simple.conf" ]; then
-      is_conky_simple=$(ps -ef | grep "conky -c $HOME/.conky/paektu/simple.conf" | grep -v "grep" | awk 'FNR {print $2}')
-
-      if [ "$is_conky_simple" = "" ]; then
-          cd $HOME/.conky/paektu
-          conky -c "$HOME/.conky/paektu/simple.conf" &
-      else
-          kill -9 $(ps -ef | grep "conky -c $HOME/.conky/paektu/simple.conf" | grep -v "grep" | awk 'FNR {print $2}')
-          cd $HOME/.conky/paektu
-          conky -c "$HOME/.conky/paektu/simple.conf" &      
-      fi
-    fi
-
     # conky - widget
-    if [ -f "$HOME/.conky/paektu/widget.conf" ]; then
-      is_conky_simple=$(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
+    # if [ -f "$HOME/.conky/paektu/widget.conf" ]; then
+    #   is_conky_widget=$(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
 
-      if [ "$is_conky_simple" = "" ]; then
-          cd $HOME/.conky/paektu
-          conky -c "$HOME/.conky/paektu/widget.conf" &
+    #   if [ "$is_conky_widget" = "" ]; then
+    #       cd $HOME/.conky/paektu
+    #       conky -c "$HOME/.conky/paektu/widget.conf" &
+    #   else
+    #       kill -9 $(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
+    #       cd $HOME/.conky/paektu
+    #       conky -c "$HOME/.conky/paektu/widget.conf" &      
+    #   fi
+    # fi    
+
+    # conky - shortcut banner
+    if [ -f "$HOME/.conky/hamonikr/banner.conf" ]; then
+      is_conky_banner=$(ps -ef | grep "conky -c $HOME/.conky/hamonikr/banner.conf" | grep -v "grep" | awk 'FNR {print $2}')
+
+      if [ "$is_conky_banner" = "" ]; then
+          cd $HOME/.conky/hamonikr
+          conky -c "$HOME/.conky/hamonikr/banner.conf" &
       else
-          kill -9 $(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
-          cd $HOME/.conky/paektu
-          conky -c "$HOME/.conky/paektu/widget.conf" &      
+          kill -9 $(ps -ef | grep "conky -c $HOME/.conky/hamonikr/banner.conf" | grep -v "grep" | awk 'FNR {print $2}')
+          cd $HOME/.conky/hamonikr
+          conky -c "$HOME/.conky/hamonikr/banner.conf" &      
       fi
-    fi    
-    
+    fi        
+
+    # conky - simple
+    # if [ -f "$HOME/.conky/paektu/simple.conf" ]; then
+    #   is_conky_simple=$(ps -ef | grep "conky -c $HOME/.conky/paektu/simple.conf" | grep -v "grep" | awk 'FNR {print $2}')
+
+    #   if [ "$is_conky_simple" = "" ]; then
+    #       cd $HOME/.conky/paektu
+    #       conky -c "$HOME/.conky/paektu/simple.conf" &
+    #   else
+    #       kill -9 $(ps -ef | grep "conky -c $HOME/.conky/paektu/simple.conf" | grep -v "grep" | awk 'FNR {print $2}')
+    #       cd $HOME/.conky/paektu
+    #       conky -c "$HOME/.conky/paektu/simple.conf" &      
+    #   fi
+    # fi
+
   else
     log "Conky command not found. Skipping conky configuration."
   fi

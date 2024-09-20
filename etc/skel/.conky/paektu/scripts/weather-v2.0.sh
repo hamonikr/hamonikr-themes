@@ -15,7 +15,8 @@ api_key=18f1953946715102959bd39b2f7a0cfc
 unit=metric
 
 # i'm not sure it will support all languange, 
-lang=kr
+#lang=kr
+lang=en
 
 # http://api.openweathermap.org/geo/1.0/direct?q=Seoul,kr&limit=5&appid=18f1953946715102959bd39b2f7a0cfc
 # Seoul
