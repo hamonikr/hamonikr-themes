@@ -19,17 +19,17 @@ log() {
 show_conky() {
   # Check if conky command exists
   if command -v conky &> /dev/null; then
-    # conky - widget
-    # if [ -f "$HOME/.conky/paektu/widget.conf" ]; then
-    #   is_conky_widget=$(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
+    # conky - info
+    # if [ -f "$HOME/.conky/paektu/info.conf" ]; then
+    #   is_conky_info=$(ps -ef | grep "conky -c $HOME/.conky/paektu/info.conf" | grep -v "grep" | awk 'FNR {print $2}')
 
-    #   if [ "$is_conky_widget" = "" ]; then
+    #   if [ "$is_conky_info" = "" ]; then
     #       cd $HOME/.conky/paektu
-    #       conky -c "$HOME/.conky/paektu/widget.conf" &
+    #       conky -c "$HOME/.conky/paektu/info.conf" &
     #   else
-    #       kill -9 $(ps -ef | grep "conky -c $HOME/.conky/paektu/widget.conf" | grep -v "grep" | awk 'FNR {print $2}')
+    #       kill -9 $(ps -ef | grep "conky -c $HOME/.conky/paektu/info.conf" | grep -v "grep" | awk 'FNR {print $2}')
     #       cd $HOME/.conky/paektu
-    #       conky -c "$HOME/.conky/paektu/widget.conf" &      
+    #       conky -c "$HOME/.conky/paektu/info.conf" &      
     #   fi
     # fi    
 

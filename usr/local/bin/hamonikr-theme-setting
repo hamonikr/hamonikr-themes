@@ -49,6 +49,49 @@ detect_desktop_environment() {
 DESKTOP_ENV=$(detect_desktop_environment)
 DESKTOP_ENV=$(echo "$DESKTOP_ENV" | tr '[:upper:]' '[:lower:]')
 
+set_keyboard_shortcuts() {
+    # 단축키
+    if command -v shutter &> /dev/null ; then
+        if ! command -v ask_openai &> /dev/null ; then
+            log "update default keyboard shortcut settings for shutter"
+            gsettings set org.cinnamon.desktop.keybindings.media-keys www "['<Super>w']"
+            gsettings set org.cinnamon.desktop.keybindings.media-keys help "['F1']"
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ binding "['<Shift><Primary><Alt>p']"
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ command 'shutter -s'
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ name '특정영역 화면캡처'
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom1/ binding "['<Primary><Alt>p']"
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom1/ command 'shutter -w'
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom1/ name '선택한 윈도우 화면캡처'
+            gsettings set org.cinnamon.desktop.keybindings custom-list "['custom0','custom1']"
+        else
+            log "update default keyboard shortcut settings for shutter and ask_openai"
+            gsettings set org.cinnamon.desktop.keybindings.media-keys www "['<Super>w']"
+            gsettings set org.cinnamon.desktop.keybindings.media-keys help "['F1']"                      
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ binding "['<Shift><Primary><Alt>p']"
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ command 'shutter -s'
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ name '특정영역 화면캡처'
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom1/ binding "['<Primary><Alt>p']"
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom1/ command 'shutter -w'
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom1/ name '선택한 윈도우 화면캡처'
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom2/ binding "['<Primary><Alt>a']"
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom2/ command 'ask_openai'
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom2/ name 'AI 질의'
+            gsettings set org.cinnamon.desktop.keybindings custom-list "['custom0','custom1','custom2']"
+        fi
+    else
+        if command -v ask_openai &> /dev/null ; then    
+            log "update default keyboard shortcut settings for ask_openai"
+            gsettings set org.cinnamon.desktop.keybindings.media-keys www "['<Super>w']"
+            gsettings set org.cinnamon.desktop.keybindings.media-keys help "['F1']"
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ binding "['<Primary><Alt>a']"
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ command 'ask_openai'
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ name 'AI 질의'
+            gsettings set org.cinnamon.desktop.keybindings custom-list "['custom0']"
+        fi
+    fi
+    log "Updated keyboard shortcut settings"
+}
+
 update_dconf() {
 
   # Copy screen recoding applet to user space
@@ -188,6 +231,7 @@ case $1 in
       # fi
 
       update_dconf
+      set_keyboard_shortcuts
       gsettings set org.cinnamon panels-enabled "['1:0:top']"
 
       # Mac 스타일로 Dock 사용하는 경우에는 plank 설정
@@ -217,6 +261,7 @@ case $1 in
       # fi
 
       update_dconf
+      set_keyboard_shortcuts
       gsettings set org.cinnamon panels-enabled "['1:0:bottom']"
   
       # 윈도우 스타일로 Dock 사용을 안하는 경우에는 kill plank
