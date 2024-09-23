@@ -1,3 +1,9 @@
+hamonikr-themes (5.1.3) unstable; urgency=medium
+
+  * Changed nemo file rename tool as bulky
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 23 Sep 2024 17:04:02 +0900
+
 hamonikr-themes (5.1.2) unstable; urgency=medium
 
   * Add set_keyboard_shortcuts
